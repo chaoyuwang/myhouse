@@ -1,0 +1,1888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>领用</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/stock-index.css">
+</head>
+<body>
+<!-- 头部   -->
+    <header>
+        <!-- 顶部导航部分 -->
+        <div class="container shortcut">
+            <div class="w1210">
+                <!-- 左侧导航 -->
+                <div class="left-nav col-lg-5">
+                    <ul>
+                        <li id="app-jd" data-widget="dropdown">
+                            <a href="http://www.humaiw.com" target="_blank">导航首页</a>
+                        </li>
+                        <li>
+                            <a href="http://www.humaiw.com/index.php" target="_blank">钢铁商城</a>
+                        </li>
+                        <li><a href="http://car.humaiw.com" target="_blank">汽车商城</a></li>
+                        <li><a href="http://market.humaiw.com" target="_blank">快消品商城</a></li>
+                        <li><a href="#" target="_blank">北方备件商城</a></li>
+                    </ul>
+                </div>
+                <!-- 右侧 -->
+                <div class="right-info">
+                    <ul>
+                        <li id="loginbar">
+
+                            <!--<a href="{:U('Home/Orders/queryByPage')}">
+                                <span style="color:#C31529">{$WST_USER["userName"]?$WST_USER["userName"]:$WST_USER["loginName"]}</span>
+                            </a>-->
+                            欢迎光临<!--{$CONF['mallName']}！-->北方备件商城！
+                            <!--<if condition="!$WST_USER['userId']">-->
+                            <a href="{:U('Home/Users/login')}">请登录</a>
+                            <a href="{:U('Home/Users/regist')}" style="color: #C31529;padding-left: 16px;">
+                                免费注册
+                            </a>
+                            <!--</if>-->
+                            <!--<if condition="$WST_USER["userId"] gt 0">
+                                <a href="javascript:logout();">[退出]</a>
+                            <!--</if>-->
+                        </li>
+                        <li><a>│</a></li>
+                        <li><a href="#">我的信息 </a> ∨</li>
+                        <li><a>│</a></li>
+                        <li><a href="#">关注我们</a> ∨</li>
+                        <li><a>│</a></li>
+                        <li><a href="#">帮助中心</a> ∨</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- LOGO 搜索栏和购物车部分 -->
+        <div class="container">
+            <div class="w1210">
+                <!-- logo -->
+                <div class="logo-img fl col-lg-3">
+                    <!-- logo网址是备件商城主页 -->
+                        <a href="#" class="logo"></a>
+                </div>
+                <!-- 搜索栏 -->
+                <div class="fl search">
+                    <div class="form">
+                        <div class="wlbm-form">
+                            <span>物料编码</span>
+                            <input type="text" data="wst_key_search" onkeyup="getSearchInfo(this,event);" placeholder="金立备件"/>
+                        </div>
+                        <div class="sbmc-form">
+                            <span>设备名称</span>
+                            <input type="text" data="wst_key_search" onkeyup="getSearchInfo(this,event);" placeholder="金立备件"/>
+                        </div>
+                        <div class="ggxh-form">
+                            <span>规格型号</span>
+                            <input type="text" data="wst_key_search" onkeyup="getSearchInfo(this,event);" placeholder="金立备件"/>
+                        </div>
+                        <div class="gys-form">
+                            <span>供应商</span>
+                            <input type="text" data="wst_key_search" onkeyup="getSearchInfo(this,event);" placeholder="金立备件"/>
+                        </div>
+                        <button value="{$keyWords} onkeyup="getSearchInfo(this,event);" data="wst_key_search" id="keyword" type="button" onclick="" class="cw">搜索</button>
+                    </div>
+                </div>
+                <!-- 购物车 -->
+                <!--<div id="" class="fl shop-cat">-->
+                    <!--<div class="fl ac shopcat-box">-->
+                        <!--<i class="car-icon"></i>-->
+                        <!--<i class="sum-icon">-->
+
+                                    <!--<span class="wst-nvg-cart-cnt cart_num">-->
+                                        <!--2-->
+                                    <!--</span>-->
+
+                        <!--</i>-->
+                        <!--<a href="#" class="">我的购物车</a>-->
+                        <!--<i class="left-icon"></i>-->
+                        <!--&lt;!&ndash; 购物车内容 &ndash;&gt;-->
+                        <!--<div class="wst-cart-box" style="display: none;">-->
+                            <!--<div class="wst-nvg-cart-goods">-->
+                                <!--<h5>购物车中暂无商品</h5>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+        <!-- nav -->
+        <nav class="w1210">
+            <div class="nav-all">
+                <a href="{:U('Home/goods/getGoodsList')}" id="allpro" class="allpro">
+                    全部产品分类
+                </a>
+                <div class="all-contents all-contents1" id="all-contents" style="display: block;">
+                    <ul>
+                        <li>
+                            <h3>
+                                <a href="#">
+                                    机械标准类
+                                </a>
+                                <i> > </i>
+                            </h3>
+                            <div class="layer-box" style="display: none">
+                                <!-- 一小类 -->
+                                <dl class="layer-box-item layer-box-item1">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜1
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="layer-box-item">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                            </div>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="#">
+                                    机械非标准类
+                                </a>
+                                <i> > </i>
+                            </h3>
+                            <div class="layer-box" style="display: none">
+                                <!-- 一小类 -->
+                                <dl class="layer-box-item layer-box-item1">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜2
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="layer-box-item">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                            </div>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="#">
+                                    电气类
+                                </a>
+                                <i> > </i>
+                            </h3>
+                            <div class="layer-box" style="display: none">
+                                <!-- 一小类 -->
+                                <dl class="layer-box-item layer-box-item1">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜3
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="layer-box-item">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                            </div>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="#">
+                                    仪表自动化类
+                                </a>
+                                <i> > </i>
+                            </h3>
+                            <div class="layer-box" style="display: none">
+                                <!-- 一小类 -->
+                                <dl class="layer-box-item layer-box-item1">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜4
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="layer-box-item">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                            </div>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="#">
+                                    液压类
+                                </a>
+                                <i> > </i>
+                            </h3>
+                            <div class="layer-box" style="display: none">
+                                <!-- 一小类 -->
+                                <dl class="layer-box-item layer-box-item1">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜5
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="layer-box-item">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                            </div>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="#">
+                                    工具类
+                                </a>
+                                <i> > </i>
+                            </h3>
+                            <div class="layer-box" style="display: none">
+                                <!-- 一小类 -->
+                                <dl class="layer-box-item layer-box-item1">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜6
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="layer-box-item">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                            </div>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="#">
+                                    五金杂品类
+                                </a>
+                                <i> > </i>
+                            </h3>
+                            <div class="layer-box" style="display: none">
+                                <!-- 一小类 -->
+                                <dl class="layer-box-item layer-box-item1">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜7
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="layer-box-item">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                            </div>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="#">
+                                    钢材类
+                                </a>
+                                <i> > </i>
+                            </h3>
+                            <div class="layer-box" style="display: none">
+                                <!-- 一小类 -->
+                                <dl class="layer-box-item layer-box-item1">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜8
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="layer-box-item">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                            </div>
+                        </li>
+                        <li>
+                            <h3>
+                                <a href="#">
+                                    劳保类
+                                </a>
+                                <i> > </i>
+                            </h3>
+                            <div class="layer-box"style="display: none" >
+                                <!-- 一小类 -->
+                                <dl class="layer-box-item layer-box-item1">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜9
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                                <dl class="layer-box-item">
+                                    <!-- 标题 -->
+                                    <dt class="layer-box-tit">
+                                        <a href="">
+                                            你猜猜
+                                            <i class="layer-box-tit-icon">
+                                                >
+                                            </i>
+                                        </a>
+
+                                    </dt>
+                                    <!-- 商品名 -->
+                                    <dd class="layer-box-con">
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+                                        <a class="box-shop-name" href="">
+                                            螺母
+                                        </a>
+
+                                    </dd>
+                                </dl>
+
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="nav-items">
+                <ul>
+                    <li>
+                        <a href="">
+                            买家首页
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" style="color: #c31529;">
+                            库存领用
+                        </a>
+                    </li>
+                    <!--<li>-->
+                        <!--<a href="">-->
+                            <!--积分商城-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">-->
+                            <!--合作伙伴专区-->
+                        <!--</a>-->
+                    <!--</li>-->
+                    <!--<li>-->
+                        <!--<a href="">-->
+                            <!--技术中心-->
+                        <!--</a>-->
+                    <!--</li>-->
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="w1210">
+        <div class="depot-con">
+            <div class="tit">
+                <input class="chk-all chk-shop" type="checkbox" value="all-shops">
+                <span>全选</span>
+            </div>
+            <div class="contents">
+                <div class="chk fl">
+                    <input class="chk-shop" type="checkbox" value="">
+                </div>
+                <div class="shops-con fl">
+                    <img class="fl" src="" alt="" width="130" height="130" border="1">
+                    <div class="shops-info fl">
+                        <div class="shops-info-o">
+                            <h2 class="shop-tit fl">圣欧 防电弧手套</h2>
+                        </div>
+                        <h1 class="jg fr"><span>￥</span><b>200</b><b style="font-size: 16px;">.00</b></h1>
+                        <div class="shops-info-t">
+                            <span>物料编码：12456789</span>
+                            <span>助记码：556789</span>
+                        </div>
+                        <p class="shops-info-kc">库存：<span class="kc-value">1200&nbsp;双</span></p>
+                        <p class="shops-info-gg">规格：<span>12412X-CDJC</span></p>
+                        <div class="shops-info-inp fl">
+                            <input class="buy-num" type="text" value="1"  >
+                            <button type="button" class="num-min">
+                                -
+                            </button>
+                            <button type="button" class="num-add">
+                                +
+                            </button>
+                            <span>（单位：<i>双</i>）</span>
+                        </div>
+                        <div class="shops-info-btn fr">
+                            <button class="jrcg">加入采购</button>
+                            <button class="ly">领用</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="chk fl">
+                    <input class="chk-shop" type="checkbox" value="">
+                </div>
+                <div class="shops-con fl">
+                    <img class="fl" src="" alt="" width="130" height="130" border="1">
+                    <div class="shops-info fl">
+                        <div class="shops-info-o">
+                            <h2 class="shop-tit fl">圣欧 防电弧手套</h2>
+                        </div>
+                        <h1 class="jg fr"><span>￥</span><b>200</b><b style="font-size: 16px;">.00</b></h1>
+                        <div class="shops-info-t">
+                            <span>物料编码：12456789</span>
+                            <span>助记码：556789</span>
+                        </div>
+                        <p class="shops-info-kc">库存：<span class="kc-value">1200&nbsp;双</span></p>
+                        <p class="shops-info-gg">规格：<span>12412X-CDJC</span></p>
+                        <div class="shops-info-inp fl">
+                            <input class="buy-num" type="text" value="1"  >
+                            <button type="button" class="num-min">
+                                -
+                            </button>
+                            <button type="button" class="num-add">
+                                +
+                            </button>
+                            <span>（单位：<i>双</i>）</span>
+                        </div>
+                        <div class="shops-info-btn fr">
+                            <button class="jrcg">加入采购</button>
+                            <button class="ly">领用</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="chk fl">
+                    <input class="chk-shop" type="checkbox" value="">
+                </div>
+                <div class="shops-con fl">
+                    <img class="fl" src="" alt="" width="130" height="130" border="1">
+                    <div class="shops-info fl">
+                        <div class="shops-info-o">
+                            <h2 class="shop-tit fl">圣欧 防电弧手套</h2>
+                        </div>
+                        <h1 class="jg fr"><span>￥</span><b>200</b><b style="font-size: 16px;">.00</b></h1>
+                        <div class="shops-info-t">
+                            <span>物料编码：12456789</span>
+                            <span>助记码：556789</span>
+                        </div>
+                        <p class="shops-info-kc">库存：<span class="kc-value">1200&nbsp;双</span></p>
+                        <p class="shops-info-gg">规格：<span>12412X-CDJC</span></p>
+                        <div class="shops-info-inp fl">
+                            <input class="buy-num" type="text" value="1"  >
+                            <button type="button" class="num-min">
+                                -
+                            </button>
+                            <button type="button" class="num-add">
+                                +
+                            </button>
+                            <span>（单位：<i>双</i>）</span>
+                        </div>
+                        <div class="shops-info-btn fr">
+                            <button class="jrcg">加入采购</button>
+                            <button class="ly">领用</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="chk fl">
+                    <input class="chk-shop" type="checkbox" value="">
+                </div>
+                <div class="shops-con fl">
+                    <img class="fl" src="" alt="" width="130" height="130" border="1">
+                    <div class="shops-info fl">
+                        <div class="shops-info-o">
+                            <h2 class="shop-tit fl">圣欧 防电弧手套</h2>
+                        </div>
+                        <h1 class="jg fr"><span>￥</span><b>200</b><b style="font-size: 16px;">.00</b></h1>
+                        <div class="shops-info-t">
+                            <span>物料编码：12456789</span>
+                            <span>助记码：556789</span>
+                        </div>
+                        <p class="shops-info-kc">库存：<span class="kc-value">1200&nbsp;双</span></p>
+                        <p class="shops-info-gg">规格：<span>12412X-CDJC</span></p>
+                        <div class="shops-info-inp fl">
+                            <input class="buy-num" type="text" value="1"  >
+                            <button type="button" class="num-min">
+                                -
+                            </button>
+                            <button type="button" class="num-add">
+                                +
+                            </button>
+                            <span>（单位：<i>双</i>）</span>
+                        </div>
+                        <div class="shops-info-btn fr">
+                            <button class="jrcg">加入采购</button>
+                            <button class="ly">领用</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="chk fl">
+                    <input class="chk-shop" type="checkbox" value="">
+                </div>
+                <div class="shops-con fl">
+                    <img class="fl" src="" alt="" width="130" height="130" border="1">
+                    <div class="shops-info fl">
+                        <div class="shops-info-o">
+                            <h2 class="shop-tit fl">圣欧 防电弧手套</h2>
+                        </div>
+                        <h1 class="jg fr"><span>￥</span><b>200</b><b style="font-size: 16px;">.00</b></h1>
+                        <div class="shops-info-t">
+                            <span>物料编码：12456789</span>
+                            <span>助记码：556789</span>
+                        </div>
+                        <p class="shops-info-kc">库存：<span class="kc-value">1200&nbsp;双</span></p>
+                        <p class="shops-info-gg">规格：<span>12412X-CDJC</span></p>
+                        <div class="shops-info-inp fl">
+                            <input class="buy-num" type="text" value="1"  >
+                            <button type="button" class="num-min">
+                                -
+                            </button>
+                            <button type="button" class="num-add">
+                                +
+                            </button>
+                            <span>（单位：<i>双</i>）</span>
+                        </div>
+                        <div class="shops-info-btn fr">
+                            <button class="jrcg">加入采购</button>
+                            <button class="ly">领用</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="chk fl">
+                    <input class="chk-shop" type="checkbox" value="">
+                </div>
+                <div class="shops-con fl">
+                    <img class="fl" src="" alt="" width="130" height="130" border="1">
+                    <div class="shops-info fl">
+                        <div class="shops-info-o">
+                            <h2 class="shop-tit fl">圣欧 防电弧手套</h2>
+                        </div>
+                        <h1 class="jg fr"><span>￥</span><b>200</b><b style="font-size: 16px;">.00</b></h1>
+                        <div class="shops-info-t">
+                            <span>物料编码：12456789</span>
+                            <span>助记码：556789</span>
+                        </div>
+                        <p class="shops-info-kc">库存：<span class="kc-value">1200&nbsp;双</span></p>
+                        <p class="shops-info-gg">规格：<span>12412X-CDJC</span></p>
+                        <div class="shops-info-inp fl">
+                            <input class="buy-num" type="text" value="1"  >
+                            <button type="button" class="num-min">
+                                -
+                            </button>
+                            <button type="button" class="num-add">
+                                +
+                            </button>
+                            <span>（单位：<i>双</i>）</span>
+                        </div>
+                        <div class="shops-info-btn fr">
+                            <button class="jrcg">加入采购</button>
+                            <button class="ly">领用</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="chk fl">
+                    <input class="chk-shop" type="checkbox" value="">
+                </div>
+                <div class="shops-con fl">
+                    <img class="fl" src="" alt="" width="130" height="130" border="1">
+                    <div class="shops-info fl">
+                        <div class="shops-info-o">
+                            <h2 class="shop-tit fl">圣欧 防电弧手套</h2>
+                        </div>
+                        <h1 class="jg fr"><span>￥</span><b>200</b><b style="font-size: 16px;">.00</b></h1>
+                        <div class="shops-info-t">
+                            <span>物料编码：12456789</span>
+                            <span>助记码：556789</span>
+                        </div>
+                        <p class="shops-info-kc">库存：<span class="kc-value">1200&nbsp;双</span></p>
+                        <p class="shops-info-gg">规格：<span>12412X-CDJC</span></p>
+                        <div class="shops-info-inp fl">
+                            <input class="buy-num" type="text" value="1"  >
+                            <button type="button" class="num-min">
+                                -
+                            </button>
+                            <button type="button" class="num-add">
+                                +
+                            </button>
+                            <span>（单位：<i>双</i>）</span>
+                        </div>
+                        <div class="shops-info-btn fr">
+                            <button class="jrcg">加入采购</button>
+                            <button class="ly">领用</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="chk fl">
+                    <input class="chk-shop" type="checkbox" value="">
+                </div>
+                <div class="shops-con fl">
+                    <img class="fl" src="" alt="" width="130" height="130" border="1">
+                    <div class="shops-info fl">
+                        <div class="shops-info-o">
+                            <h2 class="shop-tit fl">圣欧 防电弧手套</h2>
+                        </div>
+                        <h1 class="jg fr"><span>￥</span><b>200</b><b style="font-size: 16px;">.00</b></h1>
+                        <div class="shops-info-t">
+                            <span>物料编码：12456789</span>
+                            <span>助记码：556789</span>
+                        </div>
+                        <p class="shops-info-kc">库存：<span class="kc-value">1200&nbsp;双</span></p>
+                        <p class="shops-info-gg">规格：<span>12412X-CDJC</span></p>
+                        <div class="shops-info-inp fl">
+                            <input class="buy-num" type="text" value="1"  >
+                            <button type="button" class="num-min">
+                                -
+                            </button>
+                            <button type="button" class="num-add">
+                                +
+                            </button>
+                            <span>（单位：<i>双</i>）</span>
+                        </div>
+                        <div class="shops-info-btn fr">
+                            <button class="jrcg">加入采购</button>
+                            <button class="ly">领用</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="chk fl">
+                    <input class="chk-shop" type="checkbox" value="">
+                </div>
+                <div class="shops-con fl">
+                    <img class="fl" src="" alt="" width="130" height="130" border="1">
+                    <div class="shops-info fl">
+                        <div class="shops-info-o">
+                            <h2 class="shop-tit fl">圣欧 防电弧手套</h2>
+                        </div>
+                        <h1 class="jg fr"><span>￥</span><b>200</b><b style="font-size: 16px;">.00</b></h1>
+                        <div class="shops-info-t">
+                            <span>物料编码：12456789</span>
+                            <span>助记码：556789</span>
+                        </div>
+                        <p class="shops-info-kc">库存：<span class="kc-value">1200&nbsp;双</span></p>
+                        <p class="shops-info-gg">规格：<span>12412X-CDJC</span></p>
+                        <div class="shops-info-inp fl">
+                            <input class="buy-num" type="text" value="1"  >
+                            <button type="button" class="num-min">
+                                -
+                            </button>
+                            <button type="button" class="num-add">
+                                +
+                            </button>
+                            <span>（单位：<i>双</i>）</span>
+                        </div>
+                        <div class="shops-info-btn fr">
+                            <button class="jrcg">加入采购</button>
+                            <button class="ly">领用</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="contents">
+                <div class="chk fl">
+                    <input class="chk-shop" type="checkbox" value="">
+                </div>
+                <div class="shops-con fl">
+                    <img class="fl" src="" alt="" width="130" height="130" border="1">
+                    <div class="shops-info fl">
+                        <div class="shops-info-o">
+                            <h2 class="shop-tit fl">圣欧 防电弧手套</h2>
+                        </div>
+                        <h1 class="jg fr"><span>￥</span><b>200</b><b style="font-size: 16px;">.00</b></h1>
+                        <div class="shops-info-t">
+                            <span>物料编码：12456789</span>
+                            <span>助记码：556789</span>
+                        </div>
+                        <p class="shops-info-kc">库存：<span class="kc-value">1200&nbsp;双</span></p>
+                        <p class="shops-info-gg">规格：<span>12412X-CDJC</span></p>
+                        <div class="shops-info-inp fl">
+                            <input class="buy-num" type="text" value="1"  >
+                            <button type="button" class="num-min">
+                                -
+                            </button>
+                            <button type="button" class="num-add">
+                                +
+                            </button>
+                            <span>（单位：<i>双</i>）</span>
+                        </div>
+                        <div class="shops-info-btn fr">
+                            <button class="jrcg">加入采购</button>
+                            <button class="ly">领用</button>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: none">
+                    底线
+                </div>
+            </div>
+
+            <div class="depot-tail">
+                <div class="tail-ipt fl">
+                    <div class="ipt fl">
+                        <input class="chk-all chk-shop" type="checkbox" value="all-shops">
+                        <span>全选</span>
+                    </div>
+                    <div class="ipt fl">
+                        <input type="checkbox" value="fast">
+                        <span class="cr">加急</span>
+                    </div>
+                </div>
+                <div class="tail-btn fr">
+                    <button class="jrcg">加入采购</button>
+                    <button class="ly">领用</button>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+    <div class="shortcut-nav">
+        <div>
+            <a class="shop-car" href="#">
+                <span>2</span>
+            </a>
+        </div>
+        <div>
+            <a class="listing" href="#">
+                <span>2</span>
+            </a>
+        </div>
+        <div>
+            TOP
+        </div>
+    </div>
+    <footer class="w1210 wst-footer-hp-box">
+    <div class="wst-footer1">
+        <div class="wst-footer-hp-ck1">
+            <volist name="helps" key="k1" id="vo1">
+                <!--<div class="wst-footer-wz-ca">
+                    <div class="wst-footer-wz-pt">
+                        <img src="__ROOT__/Apps/Home/View/default/images/a{$k1}.jpg" height="18" width="18"/>
+                        <span class="wst-footer-wz-pn">{$vo1["catName"]}</span>
+                        <div style='margin-left:30px;'>
+                            <volist name="vo1['articlecats']" key="k2" id="vo2">
+                            <a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">{$vo2['articleTitle']}</a><br/>
+                            </volist>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="wst-footer-wz-ca">
+                    <div class="wst-footer-wz-pt">
+                        <img src="img/footiocni-0.png" height="18" width="18"/>
+                        <span class="wst-footer-wz-pn">新手上路</span>
+                        <div style='margin-left:30px;'>
+                            <volist name="vo1['articlecats']" key="k2" id="vo2">
+                                <a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">自主开户</a><br/>
+                            </volist>
+                        </div>
+                    </div>
+                </div>
+                <div class="wst-footer-wz-ca">
+                    <div class="wst-footer-wz-pt">
+                        <img src="img/footiocni-1.png" height="18" width="18"/>
+                        <span class="wst-footer-wz-pn">如何付款</span>
+                        <div style='margin-left:30px;'>
+                            <volist name="vo1['articlecats']" key="k2" id="vo2">
+                                <a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">支付方式</a><br/>
+                            </volist>
+                        </div>
+                    </div>
+                </div>
+                <div class="wst-footer-wz-ca">
+                    <div class="wst-footer-wz-pt">
+                        <img src="img/footiocni-2.png" height="18" width="18"/>
+                        <span class="wst-footer-wz-pn">配送说明</span>
+                        <div style='margin-left:30px;'>
+                            <volist name="vo1['articlecats']" key="k2" id="vo2">
+                                <a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">运费说明</a><br/>
+                            </volist>
+                        </div>
+                    </div>
+                </div>
+                <div class="wst-footer-wz-ca">
+                    <div class="wst-footer-wz-pt">
+                        <img src="img/footiocni-3.png" height="18" width="18"/>
+                        <span class="wst-footer-wz-pn">售后服务</span>
+                        <div style='margin-left:30px;'>
+                            <volist name="vo1['articlecats']" key="k2" id="vo2">
+                                <a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">售后服务</a><br/>
+                            </volist>
+                        </div>
+                    </div>
+                </div>
+                <div class="wst-footer-wz-ca">
+                    <div class="wst-footer-wz-pt">
+                        <img src="img/footiocni-4.png" height="18" width="18"/>
+                        <span class="wst-footer-wz-pn">常见问题</span>
+                        <div style='margin-left:30px;'>
+                            <volist name="vo1['articlecats']" key="k2" id="vo2">
+                                <a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">账号&密码问题</a><br/>
+                            </volist>
+                        </div>
+                    </div>
+                </div>
+            </volist>
+
+            <div class="wst-footer-wz-clt">
+                <div style="padding-top:5px;line-height:25px;">
+                    <img src="img/footiocni-5.png" height="18" width="18"/>
+                    <span class="wst-footer-wz-kf">联系客服</span>
+                    <div style='margin-left:30px;'>
+                        <a href="#">联系电话</a><br/>
+                        <if condition="$CONF['phoneNo'] neq ''">
+                            <!--<span class="wst-footer-pno">{$CONF['phoneNo']}</span><br/></br/>-->
+                        </if>
+                    </div>
+                </div>
+            </div>
+            <div class="wst-clear"></div>
+        </div>
+
+        <div class="">
+            <img src="img/reapal.png" height="40" width="120"/>&nbsp融宝签约商家&nbsp;|&nbsp;
+            <span class="wst-footer-frd">正品保障</span><span >100%正品</span>&nbsp;|&nbsp;
+            <span class="wst-footer-frd">质量保障</span>购物无忧&nbsp;|&nbsp;
+        </div>
+        <div class="wst-footer-hp-ck3">
+            <div class="links">
+                <volist name=":WSTNavigation(1)" id="vo" >
+                    <a rel="nofollow" <if condition="$vo['isOpen'] eq 1">
+                    <!--target="_blank"</if> href="{$vo['navUrl']}">{$vo['navTitle']}
+                </a>
+                &nbsp;
+                <if condition="$vo['end'] eq 0">|&nbsp;</if>-->
+                </volist>
+            </div>
+
+            <div class="copyright">
+
+                <!--<php>
+                    if($CONF['mallFooter']!=''){
+                         echo htmlspecialchars_decode($CONF['mallFooter']);
+                    }
+                </php>
+
+                 <if condition="$CONF['mallLicense'] ==''">-->
+                <div>
+                    Copyright©2015 Powered By <a target="_blank" href="http://www.wstmall.com">WSTMall</a>
+                </div>
+                <else/>
+                <div id="wst-mallLicense" data='1' style="display:none;">Copyright©2015 Powered By <a target="_blank" href="http://www.wstmall.com">WSTMall</a></div>
+                </if>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/stock-index.js"></script>
+</html>

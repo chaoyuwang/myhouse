@@ -1,0 +1,56 @@
+// 常用css样式设置整理
+$legacy-support-for-ie: true !default;
+// 变量存储
+// 字体Unicode编码 微软雅黑:\5FAE\8F6F\96C5\9ED1 , 宋体:\5B8B\4F53
+$pcFont: '\5FAE\8F6F\96C5\9ED1', '\5B8B\4F53', arial;
+$defaultColor: #333;
+$mobileFont: 'Helvetica Neue', Helvetica, STHeiTi, Microsoft YaHei, sans-serif, Microsoft JhengHei, Arial;
+$browser: null;
+// 1、元素水平、垂直居中--混合器声明
+  // ##调用：@include center($width, $height);
+@mixin center($width:null, $height:null) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @if $width and $height {
+    width: $width;
+    height: $height;
+    margin-left: -$width/2;
+    margin-top: -$height/2;
+  } @else if $width {
+    width: $width;
+    margin-left: -$width/2;
+    transform: translateY(-50%);
+  } @else if $height {
+    height: $height;
+    margin-top: -$height/2;
+    transform: translateX(-50%);
+  } @else {
+    transform: translate(-50%, -50%);
+  }
+}
+
+// 2、清楚浮动——占位符声明
+  // 调用方法：@extend %clearfix;
+%clearfix {
+  *zoom: 1;
+  &::after,
+  &::before{
+    content: "";
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+  }
+  &::after{
+    clear: both
+  }
+}
+  // @mixin bootstrap 4.0方法
+  @mixin clearfix() {
+    &::after {
+      display: block;
+      clear: both;
+      content: "";
+    }
+  }
+

@@ -1,0 +1,2192 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+		<meta name="Keywords" Content="北方备件商城,北方,备件,beifangbenjian,bfbj " />
+		<title>北方备件商城</title>
+		<!-- icon -->
+		<link href="" rel="shortcut icon" />
+		<link rel="stylesheet" href="css/goods-detail.css" />
+
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/index.css" />
+
+
+	</head>
+	<body>
+
+	<!-- 头部   -->
+	<header>
+		<!-- 顶部导航部分 -->
+		<div class="container shortcut">
+			<div class="w1210">
+				<!-- 左侧导航 -->
+				<div class="left-nav col-lg-5">
+					<ul>
+						<li id="app-jd" data-widget="dropdown">
+							<a href="http://www.humaiw.com" target="_blank">导航首页</a>
+						</li>
+						<li>
+							<a href="http://www.humaiw.com/index.php" target="_blank">钢铁商城</a>
+						</li>
+						<li><a href="http://car.humaiw.com" target="_blank">汽车商城</a></li>
+						<li><a href="http://market.humaiw.com" target="_blank">快消品商城</a></li>
+						<li><a href="#" target="_blank">北方备件商城</a></li>
+					</ul>
+				</div>
+				<!-- 右侧 -->
+				<div class="right-info">
+					<ul>
+						<li id="loginbar">
+
+							<!--<a href="{:U('Home/Orders/queryByPage')}">
+                                <span style="color:#C31529">{$WST_USER["userName"]?$WST_USER["userName"]:$WST_USER["loginName"]}</span>
+                            </a>-->
+							欢迎光临<!--{$CONF['mallName']}！-->北方备件商城！
+							<!--<if condition="!$WST_USER['userId']">-->
+							<a href="{:U('Home/Users/login')}">请登录</a>
+							<a href="{:U('Home/Users/regist')}" style="color: #C31529;padding-left: 16px;">
+								免费注册
+							</a>
+							<!--</if>-->
+							<!--<if condition="$WST_USER["userId"] gt 0">
+                                <a href="javascript:logout();">[退出]</a>
+                            <!--</if>-->
+						</li>
+						<li><a>│</a></li>
+						<li><a href="#">我的信息 </a> ∨</li>
+						<li><a>│</a></li>
+						<li><a href="#">关注我们</a> ∨</li>
+						<li><a>│</a></li>
+						<li><a href="#">帮助中心</a> ∨</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- LOGO 搜索栏和购物车部分 -->
+		<div class="container">
+			<div class="w1210">
+				<!-- logo -->
+				<div class="logo-img fl col-lg-3">
+					<!-- logo网址是备件商城主页 -->
+					<a href="#" class="logo"></a>
+				</div>
+				<!-- 搜索栏 -->
+				<div class="fl search">
+					<div class="form">
+						<input type="text" data="wst_key_search" onkeyup="getSearchInfo(this,event);" placeholder="金立备件"/>
+						<button value="{$keyWords} onkeyup="getSearchInfo(this,event);" data="wst_key_search" id="keyword" type="button" onclick="" class="cw">搜索</button>
+						<button type="button" class="kc">领用库存</button>
+					</div>
+				</div>
+				<!-- 购物车 -->
+				<div id="" class="fl shop-cat">
+					<div class="fl ac shopcat-box">
+						<i class="car-icon"></i>
+						<i class="sum-icon">
+
+								<span class="wst-nvg-cart-cnt cart_num">
+									2
+								</span>
+
+						</i>
+						<a href="#" class="">我的购物车</a>
+						<i class="left-icon"></i>
+						<!-- 购物车内容 -->
+						<div class="wst-cart-box" style="display: none;">
+							<div class="wst-nvg-cart-goods">
+								<h5>购物车中暂无商品</h5>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- nav -->
+		<nav class="w1210">
+			<div class="nav-all">
+				<a href="#" id="allpro" class="allpro">
+					全部产品分类
+				</a>
+				<div class="all-contents all-contents1" id="all-contents" style="display: none;">
+					<ul>
+						<li>
+							<h3>
+								<a href="#">
+									机械标准类
+								</a>
+								<i> > </i>
+							</h3>
+							<div class="layer-box" style="display: none">
+								<!-- 一小类 -->
+								<dl class="layer-box-item layer-box-item1">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜1
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+								<dl class="layer-box-item">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+							</div>
+						</li>
+						<li>
+							<h3>
+								<a href="#">
+									机械非标准类
+								</a>
+								<i> > </i>
+							</h3>
+							<div class="layer-box" style="display: none">
+								<!-- 一小类 -->
+								<dl class="layer-box-item layer-box-item1">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜2
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+								<dl class="layer-box-item">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+							</div>
+						</li>
+						<li>
+							<h3>
+								<a href="#">
+									电气类
+								</a>
+								<i> > </i>
+							</h3>
+							<div class="layer-box" style="display: none">
+								<!-- 一小类 -->
+								<dl class="layer-box-item layer-box-item1">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜3
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+								<dl class="layer-box-item">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+							</div>
+						</li>
+						<li>
+							<h3>
+								<a href="#">
+									仪表自动化类
+								</a>
+								<i> > </i>
+							</h3>
+							<div class="layer-box" style="display: none">
+								<!-- 一小类 -->
+								<dl class="layer-box-item layer-box-item1">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜4
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+								<dl class="layer-box-item">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+							</div>
+						</li>
+						<li>
+							<h3>
+								<a href="#">
+									液压类
+								</a>
+								<i> > </i>
+							</h3>
+							<div class="layer-box" style="display: none">
+								<!-- 一小类 -->
+								<dl class="layer-box-item layer-box-item1">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜5
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+								<dl class="layer-box-item">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+							</div>
+						</li>
+						<li>
+							<h3>
+								<a href="#">
+									工具类
+								</a>
+								<i> > </i>
+							</h3>
+							<div class="layer-box" style="display: none">
+								<!-- 一小类 -->
+								<dl class="layer-box-item layer-box-item1">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜6
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+								<dl class="layer-box-item">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+							</div>
+						</li>
+						<li>
+							<h3>
+								<a href="#">
+									五金杂品类
+								</a>
+								<i> > </i>
+							</h3>
+							<div class="layer-box" style="display: none">
+								<!-- 一小类 -->
+								<dl class="layer-box-item layer-box-item1">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜7
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+								<dl class="layer-box-item">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+							</div>
+						</li>
+						<li>
+							<h3>
+								<a href="#">
+									钢材类
+								</a>
+								<i> > </i>
+							</h3>
+							<div class="layer-box" style="display: none">
+								<!-- 一小类 -->
+								<dl class="layer-box-item layer-box-item1">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜8
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+								<dl class="layer-box-item">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+							</div>
+						</li>
+						<li>
+							<h3>
+								<a href="#">
+									劳保类
+								</a>
+								<i> > </i>
+							</h3>
+							<div class="layer-box"style="display: none" >
+								<!-- 一小类 -->
+								<dl class="layer-box-item layer-box-item1">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜9
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+								<dl class="layer-box-item">
+									<!-- 标题 -->
+									<dt class="layer-box-tit">
+										<a href="">
+											你猜猜
+											<i class="layer-box-tit-icon">
+												>
+											</i>
+										</a>
+
+									</dt>
+									<!-- 商品名 -->
+									<dd class="layer-box-con">
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+										<a class="box-shop-name" href="">
+											螺母
+										</a>
+
+									</dd>
+								</dl>
+
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="nav-items">
+				<ul>
+					<li>
+						<a href="">
+							大型备件商城
+						</a>
+					</li>
+					<li>
+						<a href="">
+							品牌专区
+						</a>
+					</li>
+					<li>
+						<a href="">
+							积分商城
+						</a>
+					</li>
+					<li>
+						<a href="">
+							合作伙伴专区
+						</a>
+					</li>
+					<li>
+						<a href="">
+							技术中心
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+		
+		<div class="croot-nav">
+			
+			<div class="w1210">
+				<div class="breadcrumb">
+					<ul>
+						<li>
+							<a href="#">
+								首页
+							</a>
+							<i> > </i>
+						</li>
+						<li>
+							<a href="#">
+								机械零部件
+							</a>
+							<i> > </i>
+						</li>
+						<!-- 品牌名 -->
+						<li>
+							<a href="#" class="shop-p">
+								金立
+							</a>
+							<i> > </i>
+						</li>
+						<!-- 商品名 -->
+						<li>
+							<a href="#" class="shop-mz">
+								水泵
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+		</div>
+		
+		<div class="w1210">
+			
+			<div class="goods-item">
+				
+				<div class="goods-img">
+
+					<div class="topimg" id="spec-n1">
+						<img src="img/1.png" alt="" jqimg="img/1.png"/>
+					</div>
+					
+					<div class="bottomimg" id="spec-n5">
+						
+						<div class="control" id="spec-left">
+							<img src="img/left.gif" />
+						</div>
+						
+						<div id="spec-list">
+							<ul class="list-h">
+								<li><img src="img/1.png"> </li>
+								<li><img src="img/2.png"> </li>
+								<li><img src="img/3.png"> </li>
+								<li><img src="img/2.png"> </li>
+								<li><img src="img/1.png"> </li>
+							</ul>
+						</div>
+						
+						<div class="control" id="spec-right">
+							<img src="img/right.gif" />
+						</div>
+						
+					</div>
+						 
+				</div>
+				<div class="goods-detail">	
+					<form class="goods-item-inner" id="goods-item-inner" action="" method="post" name="goods-item-inner">
+						<div id="name">
+							<h2>
+								水汞（金立）双核i7-5100 1151接口
+							</h2>
+						</div>
+						<div class="yListr">
+								<ul>
+									<li>
+										<span>价格</span>
+										<b class="cr jg">1500.00</b>
+									</li>
+									
+									<li>
+										<span>品牌</span>
+										<em class="yListrclickem">金立<i></i></em>
+									</li>
+									<li>
+										<span>型号</span>
+										<em class="yListrclickem">MO-75<i></i></em>
+										<em>MO-75<i></i></em>
+										<em>MO-75<i></i></em>
+									</li>
+									
+									<li>
+										<span>尺寸</span>
+										<em class="yListrclickem">5.5寸<i></i></em>
+									</li>
+
+									<li class="add_chose">
+										<span>数量</span>
+										<input type="text" name="qty_item_1" value="1" id="qty_item_1" onKeyUp="setAmount.modify('#qty_item_1')" class="text" />
+										<button type="button" class="reduce" onClick="setAmount.reduce('#qty_item_1')">
+											-
+										</button>
+										<button type="button" class="add" onClick="setAmount.add('#qty_item_1')">
+											+
+										</button>
+									</li>
+								</ul>
+								<button class="detail-btn-gm" type="submit">立即购买</button>
+								<button class="detail-btn-gwc" type="submit">加入购物车</button>
+							
+						</div>
+					</form>
+					
+				</div>
+			</div>
+			<div class="details-right">
+				<table class="details-tab">
+					<tbody>
+						<tr>
+							<td class="title">店铺名称：</td>
+							<td>天津金立盛业有限公司</td>
+						</tr>
+						<tr>
+							<td class="title">营业时间：</td>
+							<td>8:00-17:30</td>
+						</tr>
+						<!--<tr>
+							<td class="title">配送说明：</td>
+							<td>0.00元起，配送费0.00元<br/>0.00元起免配送费<br/><br/></td>
+						</tr>-->
+						<tr>
+							<td class="title">店铺地址：</td>
+							<td>天津市东丽区军粮城产业园区先锋东路233号</td>
+						</tr>
+						<tr>
+							<td class="title">店铺电话：</td>
+							<td>24362599</td>
+						</tr>
+						<tr>
+							<td class="title">&nbsp;QQ咨询：</td>
+							<td>
+								<a href="tencent://message/?uin=270307214&amp;Site=QQ交谈&amp;Menu=yes">
+								<img border="0" src="http://wpa.qq.com/pa?p=1:270307214:7" alt="QQ交谈" width="71" height="24">
+								</a><br>
+							</td>
+						</tr>							<tr>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" class="wst-shop-eval">
+								<div class="shop-eval-box" style="width:220px;margin:0 auto;">
+									    <ul>
+									    <li>商品<br>0</li>
+										<li class="li-center">时效<br>0</li>
+										<li>服务<br>0</li>
+										</ul>
+									<div class="wst-clear"></div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+							<td></td>
+						</tr>
+						<tr>
+							<td colspan="2" class="wst-shop-eval">
+								<div class="shop-eval-box" style="width:214px;margin:0 auto;">
+									<a class="wst-shop-btn" href="/index.php?m=Home&amp;c=Shops&amp;a=toShopHome&amp;shopId=48">
+									进入店铺
+									</a>
+									<a class="wst-shop-btn" href="javascript:favoriteShops(48)">
+									<span id="f1_txt" f="0">关注店铺</span>
+									</a>
+								</div>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		
+		<div>
+			
+			<div class="w1210">
+				<div class="" style="overflow: hidden;clear: both;zoom: 1;padding-top: 20px;">
+				<div class="left-goods">
+					<div class="hot-goods">
+						<ul>
+							<li>
+								<h4>热销商品</h4>
+							</li>
+							<li>
+								<div class="hot-goods-body">
+									<div class="hot-goods-img">
+										<img src="img/1.png" width="200" height="200"/>
+									</div>
+									<p class="hot-goods-name">水泵（金立）双核i7-5100 1151接口</p>
+									<span class="hot-goods-jj">水泵（金立）</span>
+									<div class="hot-goods-jq cr">
+										<span> ￥ </span>
+										<b>1500.00</b>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="hot-goods-body">
+									<div class="hot-goods-img">
+										<img src="img/1.png" width="200" height="200"/>
+									</div>
+									<p class="hot-goods-name">水泵（金立）双核i7-5100 1151接口</p>
+									<span class="hot-goods-jj">水泵（金立）</span>
+									<div class="hot-goods-jq cr">
+										<span> ￥ </span>
+										<b>1500.00</b>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="time-goods">
+						<ul>
+							<li>
+								<h4>最近浏览</h4>
+							</li>
+							<li>
+								<div class="time-goods-body">
+									<div class="time-goods-img">
+										<img src="img/1.png" width="200" height="200"/>
+									</div>
+									<p class="time-goods-name">水泵（金立）双核i7-5100 1151接口</p>
+									<span class="time-goods-jj">水泵（金立）</span>
+									<div class="time-goods-jq cr">
+										<span> ￥ </span>
+										<b>1500.00</b>
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="time-goods-body">
+									<div class="time-goods-img">
+										<img src="img/1.png" width="200" height="200"/>
+									</div>
+									<p class="time-goods-name">水泵（金立）双核i7-5100 1151接口</p>
+									<span class="time-goods-jj">水泵（金立）</span>
+									<div class="time-goods-jq cr">
+										<span> ￥ </span>
+										<b>1500.00</b>
+									</div>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="right-goods">
+					<div class="tabnav">
+							<ul>
+								<li>
+									<a class="xz">
+										产品介绍
+									</a>
+								</li>
+								<li>
+									<a>
+										咨询评论
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div class="detail-content">
+							<div class="detail-content1">
+								<div class="detail-tit">
+									<div class="name">
+								<span>
+									品牌名称：
+								</span>
+										<a href="#">
+											金立
+										</a>
+									</div>
+									<p class="clear">
+										产品参数：
+									</p>
+									<ul class="clear-tab">
+										<li title="&nbsp;5531AE69092W">货号: &nbsp;5531AE69092W</li>
+										<li title="&nbsp;5531AE69092W">货号: &nbsp;5531AE69092W</li>
+										<li title="&nbsp;5531AE69092W">货号: &nbsp;5531AE69092W</li>
+										<li title="&nbsp;5531AE69092W">货号: &nbsp;5531AE69092W</li>
+										<li title="&nbsp;5531AE69092W">货号: &nbsp;5531AE69092W</li>
+										<li title="&nbsp;5531AE69092W">货号: &nbsp;5531AE69092W</li>
+
+									</ul>
+								</div>
+								<div class="detail-img">
+									<p>
+										<img src="img/1.png"/>
+									</p>
+									<p>
+										<img src="img/2.png"/>
+									</p>
+									<p>
+										<img src="img/3.png"/>
+									</p>
+									<p>
+										<img src="img/1.png"/>
+									</p>
+									<p>
+										<img src="img/2.png"/>
+									</p>
+								</div>
+							</div>
+							<div class="detail-content2" style="display: none;">
+								<div class="detail-item">
+									<div class="user">
+										<span class="u-name">用  户：姓名名</span>
+										<span class="date-ask">2016-12-03 14:24:21</span>
+									</div>
+									<dl class="ask">
+										<dt>
+											咨 询 内 容：
+										</dt>
+										<dd>
+											请问这款的CPU是什么型号的呢？
+										</dd>
+									</dl>
+									<dl class="answer">
+										<dt>
+											客 服 回 复：
+										</dt>
+										<dd>
+											<p class="answer-hf">您好！此款为Intel Core i5。感谢您对互麦网的支持！祝您工作愉快！您好！此款为Intel Core i5。感谢您对互麦网的支持！祝您工作愉快！您好！此款为Intel Core i5。感谢您对互麦网的支持！祝您工作愉快！</p>
+											<p class="answer-ti">2016-12-11 12:00:00</p>
+										</dd>
+									</dl>
+								</div>
+
+								<div class="detail-item">
+									<div class="user">
+										<span class="u-name">用  户：姓名名</span>
+										<!-- 提问时间 -->
+										<span class="date-ask">2016-12-03 14:24:21</span>
+									</div>
+									<dl class="ask">
+										<dt>
+											咨 询 内 容：
+										</dt>
+										<dd>
+											请问这款的CPU是什么型号的呢？
+										</dd>
+									</dl>
+									<dl class="answer">
+										<dt>
+											客 服 回 复：
+										</dt>
+										<dd>
+											<p class="answer-hf">您好！此款为Intel Core i5。感谢您对互麦网的支持！祝您工作愉快！您好！此款为Intel Core i5。感谢您对互麦网的支持！祝您工作愉快！您好！此款为Intel Core i5。感谢您对互麦网的支持！祝您工作愉快！</p>
+											<!-- 回复时间 -->
+											<p class="answer-ti">2016-12-11 12:00:00</p>
+										</dd>
+									</dl>
+								</div>
+
+								<div class="detail-item">
+									<div class="user">
+										<span class="u-name">用  户：姓名名</span>
+										<span class="date-ask">2016-12-03 14:24:21</span>
+									</div>
+									<dl class="ask">
+										<dt>
+											咨 询 内 容：
+										</dt>
+										<dd>
+											请问这款的CPU是什么型号的呢？
+										</dd>
+									</dl>
+									<dl class="answer">
+										<dt>
+											客 服 回 复：
+										</dt>
+										<dd>
+											<p class="answer-hf">您好！此款为Intel Core i5。感谢您对互麦网的支持！祝您工作愉快！您好！此款为Intel Core i5。感谢您对互麦网的支持！祝您工作愉快！您好！此款为Intel Core i5。感谢您对互麦网的支持！祝您工作愉快！</p>
+											<p class="answer-ti">2016-12-11 12:00:00</p>
+										</dd>
+									</dl>
+								</div>
+
+								<div class="detail-item">
+									<div class="user">
+										<span class="u-name">用  户：姓名名</span>
+										<span class="date-ask">2016-12-03 14:24:21</span>
+									</div>
+									<dl class="ask">
+										<dt>
+											咨 询 内 容：
+										</dt>
+										<dd>
+											请问这款的CPU是什么型号的呢？
+										</dd>
+									</dl>
+									<dl class="answer">
+										<dt>
+											客 服 回 复：
+										</dt>
+										<dd>
+											<p class="answer-hf">您好！此款为Intel Core i5。感谢您对互麦网的支持！祝您工作愉快！您好！此款为Intel Core i5。感谢您对互麦网的支持！祝您工作愉快！您好！此款为Intel Core i5。感谢您对互麦网的支持！祝您工作愉快！</p>
+											<p class="answer-ti">2016-12-11 12:00:00</p>
+										</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	<!-- 底部 -->
+	<footer class="w1210 wst-footer-hp-box">
+		<div class="wst-footer1">
+			<div class="wst-footer-hp-ck1">
+				<volist name="helps" key="k1" id="vo1">
+					<!--<div class="wst-footer-wz-ca">
+                        <div class="wst-footer-wz-pt">
+                            <img src="__ROOT__/Apps/Home/View/default/images/a{$k1}.jpg" height="18" width="18"/>
+                            <span class="wst-footer-wz-pn">{$vo1["catName"]}</span>
+                            <div style='margin-left:30px;'>
+                                <volist name="vo1['articlecats']" key="k2" id="vo2">
+                                <a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">{$vo2['articleTitle']}</a><br/>
+                                </volist>
+                            </div>
+                        </div>
+                    </div>-->
+					<div class="wst-footer-wz-ca">
+						<div class="wst-footer-wz-pt">
+							<img src="img/footiocni-0.png" height="18" width="18"/>
+							<span class="wst-footer-wz-pn">新手上路</span>
+							<div style='margin-left:30px;'>
+								<volist name="vo1['articlecats']" key="k2" id="vo2">
+									<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">自主开户</a><br/>
+								</volist>
+							</div>
+						</div>
+					</div>
+					<div class="wst-footer-wz-ca">
+						<div class="wst-footer-wz-pt">
+							<img src="img/footiocni-1.png" height="18" width="18"/>
+							<span class="wst-footer-wz-pn">如何付款</span>
+							<div style='margin-left:30px;'>
+								<volist name="vo1['articlecats']" key="k2" id="vo2">
+									<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">支付方式</a><br/>
+								</volist>
+							</div>
+						</div>
+					</div>
+					<div class="wst-footer-wz-ca">
+						<div class="wst-footer-wz-pt">
+							<img src="img/footiocni-2.png" height="18" width="18"/>
+							<span class="wst-footer-wz-pn">配送说明</span>
+							<div style='margin-left:30px;'>
+								<volist name="vo1['articlecats']" key="k2" id="vo2">
+									<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">运费说明</a><br/>
+								</volist>
+							</div>
+						</div>
+					</div>
+					<div class="wst-footer-wz-ca">
+						<div class="wst-footer-wz-pt">
+							<img src="img/footiocni-3.png" height="18" width="18"/>
+							<span class="wst-footer-wz-pn">售后服务</span>
+							<div style='margin-left:30px;'>
+								<volist name="vo1['articlecats']" key="k2" id="vo2">
+									<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">售后服务</a><br/>
+								</volist>
+							</div>
+						</div>
+					</div>
+					<div class="wst-footer-wz-ca">
+						<div class="wst-footer-wz-pt">
+							<img src="img/footiocni-4.png" height="18" width="18"/>
+							<span class="wst-footer-wz-pn">常见问题</span>
+							<div style='margin-left:30px;'>
+								<volist name="vo1['articlecats']" key="k2" id="vo2">
+									<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">账号&密码问题</a><br/>
+								</volist>
+							</div>
+						</div>
+					</div>
+				</volist>
+
+				<div class="wst-footer-wz-clt">
+					<div style="padding-top:5px;line-height:25px;">
+						<img src="img/footiocni-5.png" height="18" width="18"/>
+						<span class="wst-footer-wz-kf">联系客服</span>
+						<div style='margin-left:30px;'>
+							<a href="#">联系电话</a><br/>
+							<if condition="$CONF['phoneNo'] neq ''">
+								<!--<span class="wst-footer-pno">{$CONF['phoneNo']}</span><br/></br/>-->
+							</if>
+						</div>
+					</div>
+				</div>
+				<div class="wst-clear"></div>
+			</div>
+
+			<div class="">
+				<img src="img/reapal.png" height="40" width="120"/>&nbsp融宝签约商家&nbsp;|&nbsp;
+				<span class="wst-footer-frd">正品保障</span><span >100%正品</span>&nbsp;|&nbsp;
+				<span class="wst-footer-frd">质量保障</span>购物无忧&nbsp;|&nbsp;
+			</div>
+			<div class="wst-footer-hp-ck3">
+				<div class="links">
+					<volist name=":WSTNavigation(1)" id="vo" >
+						<a rel="nofollow" <if condition="$vo['isOpen'] eq 1">
+						<!--target="_blank"</if> href="{$vo['navUrl']}">{$vo['navTitle']}
+                    </a>
+                    &nbsp;
+                    <if condition="$vo['end'] eq 0">|&nbsp;</if>-->
+					</volist>
+				</div>
+
+				<div class="copyright">
+
+					<!--<php>
+                        if($CONF['mallFooter']!=''){
+                             echo htmlspecialchars_decode($CONF['mallFooter']);
+                        }
+                    </php>
+
+                     <if condition="$CONF['mallLicense'] ==''">-->
+					<div>
+						Copyright©2015 Powered By <a target="_blank" href="http://www.wstmall.com">WSTMall</a>
+					</div>
+					<else/>
+					<div id="wst-mallLicense" data='1' style="display:none;">Copyright©2015 Powered By <a target="_blank" href="http://www.wstmall.com">WSTMall</a></div>
+					</if>
+				</div>
+			</div>
+		</div>
+	</footer>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/goods-detail.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/index.js"></script>
+		<script type="text/javascript">
+            $(function(){
+                $(".topimg").jqueryzoom({
+                    xzoom:400,
+                    yzoom:400,
+                    offset:10,
+                    position:"right",
+                    preload:1,
+                    lens:1
+                });
+                $("#spec-list").jdMarquee({
+                    deriction:"left",
+                    width:350,
+                    height:56,
+                    step:2,
+                    speed:4,
+                    delay:10,
+                    control:false,
+                    //_front:"#spec-right",
+                    //_back:"#spec-left"
+                });
+                $("#spec-list img").bind("mouseover",function(){
+                    var src=$(this).attr("src");
+                    $("#spec-n1 img").eq(0).attr({
+                        src:src.replace("\/n5\/","\/n1\/"),
+                        jqimg:src.replace("\/n5\/","\/n0\/")
+                    });
+                    $(this).css({
+                        "border":"2px solid #ff6600",
+                        "padding":"1px"
+                    });
+                }).bind("mouseout",function(){
+                    $(this).css({
+                        "border":"1px solid #ccc",
+                        "padding":"2px"
+                    });
+                });
+            })
+		</script>
+
+		<!-- 价格加减 -->
+		<script type="application/x-javascript">
+
+            (function($) {
+                var defaults = {reNumbers: /(-|-\$)?(\d+(,\d{3})*(\.\d{1,})?|\.\d{1,})/g, cleanseNumber: function (v) {
+                    return v.replace(/[^0-9.\-]/g, "");
+                }, useFieldPlugin: (!!$.fn.getValue), onParseError: null, onParseClear: null};
+                $.Calculation = {version: "0.4.07",setDefaults: function(options) {
+                    $.extend(defaults, options);
+                }};
+                $.fn.parseNumber = function(options) {
+                    var aValues = [];
+                    options = $.extend(options, defaults);
+                    this.each(function () {
+                        var $el = $(this),sMethod = ($el.is(":input") ? (defaults.useFieldPlugin ? "getValue" : "val") : "text"),v = $.trim($el[sMethod]()).match(defaults.reNumbers, "");
+                        if (v == null) {
+                            v = 0;
+                            if (jQuery.isFunction(options.onParseError)) options.onParseError.apply($el, [sMethod]);
+                            $.data($el[0], "calcParseError", true);
+                        } else {
+                            v = options.cleanseNumber.apply(this, [v[0]]);
+                            if ($.data($el[0], "calcParseError") && jQuery.isFunction(options.onParseClear)) {
+                                options.onParseClear.apply($el, [sMethod]);
+                                $.data($el[0], "calcParseError", false);
+                            }
+                        }
+                        aValues.push(parseFloat(v, 10));
+                    });
+                    return aValues;
+                };
+                $.fn.calc = function(expr, vars, cbFormat, cbDone) {
+                    var $this = this, exprValue = "", precision = 0, $el, parsedVars = {}, tmp, sMethod, _, bIsError = false;
+                    for (var k in vars) {
+                        expr = expr.replace((new RegExp("(" + k + ")", "g")), "_.$1");
+                        if (!!vars[k] && !!vars[k].jquery) {
+                            parsedVars[k] = vars[k].parseNumber();
+                        } else {
+                            parsedVars[k] = vars[k];
+                        }
+                    }
+                    this.each(function (i, el) {
+                        var p, len;
+                        $el = $(this);
+                        sMethod = ($el.is(":input") ? (defaults.useFieldPlugin ? "setValue" : "val") : "text");
+                        _ = {};
+                        for (var k in parsedVars) {
+                            if (typeof parsedVars[k] == "number") {
+                                _[k] = parsedVars[k];
+                            } else if (typeof parsedVars[k] == "string") {
+                                _[k] = parseFloat(parsedVars[k], 10);
+                            } else if (!!parsedVars[k] && (parsedVars[k] instanceof Array)) {
+                                tmp = (parsedVars[k].length == $this.length) ? i : 0;
+                                _[k] = parsedVars[k][tmp];
+                            }
+                            if (isNaN(_[k])) _[k] = 0;
+                            p = _[k].toString().match(/\.\d+$/gi);
+                            len = (p) ? p[0].length - 1 : 0;
+                            if (len > precision) precision = len;
+                        }
+                        try {
+                            exprValue = eval(expr);
+                            if (precision) exprValue = Number(exprValue.toFixed(Math.max(precision, 4)));
+                            if (jQuery.isFunction(cbFormat)) {
+                                var tmp = cbFormat.apply(this, [exprValue]);
+                                if (!!tmp) exprValue = tmp;
+                            }
+                        } catch(e) {
+                            exprValue = e;
+                            bIsError = true;
+                        }
+                        $el[sMethod](exprValue.toString());
+                    });
+                    if (jQuery.isFunction(cbDone)) cbDone.apply(this, [this]);
+                    return this;
+                };
+                $.each(["sum", "avg", "min", "max"], function (i, method) {
+                    $.fn[method] = function (bind, selector) {
+                        if (arguments.length == 0)return math[method](this.parseNumber());
+                        var bSelOpt = selector && (selector.constructor == Object) && !(selector instanceof jQuery);
+                        var opt = bind && bind.constructor == Object ? bind : {bind: bind || "keyup", selector: (!bSelOpt) ? selector : null, oncalc: null};
+                        if (bSelOpt) opt = jQuery.extend(opt, selector);
+                        if (!!opt.selector) opt.selector = $(opt.selector);
+                        var self = this, sMethod, doCalc = function () {
+                            var value = math[method](self.parseNumber(opt));
+                            if (!!opt.selector) {
+                                sMethod = (opt.selector.is(":input") ? (defaults.useFieldPlugin ? "setValue" : "val") : "text");
+                                opt.selector[sMethod](value.toString());
+                            }
+                            if (jQuery.isFunction(opt.oncalc)) opt.oncalc.apply(self, [value, opt]);
+                        };
+                        doCalc();
+                        return self.bind(opt.bind, doCalc);
+                    }
+                });
+                var math = {sum: function (a) {
+                    var total = 0, precision = 0;
+                    $.each(a, function (i, v) {
+                        var p = v.toString().match(/\.\d+$/gi), len = (p) ? p[0].length - 1 : 0;
+                        if (len > precision) precision = len;
+                        total += v;
+                    });
+                    if (precision) total = Number(total.toFixed(precision));
+                    return total;
+                },avg: function (a) {
+                    return math.sum(a) / a.length;
+                },min: function (a) {
+                    return Math.min.apply(Math, a);
+                },max: function (a) {
+                    return Math.max.apply(Math, a);
+                }};
+            })(jQuery);
+
+			/* 弹窗 */
+            var setAmount = {
+                min:1,
+                max:999,
+                reg:function(x) {
+                    return new RegExp("^[1-9]\\d*$").test(x);
+                },
+                amount:function(obj, mode) {
+                    var x = $(obj).val();
+                    if (this.reg(x)) {
+                        if (mode) {
+                            x++;
+                        } else {
+                            x--;
+                        }
+                    } else {
+                        alert("请输入正确的数量！");
+                        $(obj).val(1);
+                        $(obj).focus();
+                    }
+                    return x;
+                },
+                reduce:function(obj) {
+                    var x = this.amount(obj, false);
+                    if (x >= this.min) {
+                        $(obj).val(x);
+                        recalc();
+                    } else {
+                        alert("商品数量最少为" + this.min);
+                        $(obj).val(1);
+                        $(obj).focus();
+                    }
+                },
+                add:function(obj) {
+                    var x = this.amount(obj, true);
+                    if (x <= this.max) {
+                        $(obj).val(x);
+                        recalc();
+                    } else {
+                        alert("商品数量最多为" + this.max);
+                        $(obj).val(999);
+                        $(obj).focus();
+                    }
+                },
+                modify:function(obj) {
+                    var x = $(obj).val();
+                    if (x < this.min || x > this.max || !this.reg(x)) {
+                        alert("请输入正确的数量！");
+                        $(obj).val(1);
+                        $(obj).focus();
+                    }
+                }
+            }
+
+            function BuyUrl(wid) {
+                var pcounts = $("input[id^=qty_item_]").val();
+                var patrn = /^[0-9]{1,4}$/;
+                if (!patrn.exec(pcounts)) {
+                    pcounts = 1;
+                }
+                else {
+                    if (pcounts <= 0)
+                        pcounts = 1;  //初始值为 1
+                    if (pcounts >= 1000)
+                        pcounts = 999;
+                }
+            }
+            ;
+
+
+             $(document).ready(function () {
+										    $("input[name^=qty_item_]").bind("keyup", recalc);
+										    recalc();
+										});
+
+             function recalc() {
+
+										    $("input[id^=total_item]").val()
+
+										    //产品价格统计
+										    $("[id^=total_item]").calc(
+
+										        "qty * price",
+
+										        {
+										            qty: $("input[name^=qty_item_]"),
+										            price: $("[id^=price_item_]")
+										        },
+
+										        function (s) {
+
+										            return "￥" + s.toFixed(2);
+										        },
+
+										        function ($this) {
+
+										            var sum = $this.sum();
+										            $("[id^=total_item]").text(
+										                "￥" + sum.toFixed(2)
+										            );
+										            $("#total_price").val($("[id^=total_item]").text());
+										        }
+										    );
+
+										    //产品积分统计
+										    $("[id^=total_points]").calc(
+
+										        "qty * price",
+
+										        {
+										            qty: $("input[name^=qty_item_]"),
+										            price: $("[id^=price_item_]")
+										        },
+
+										        function (s) {
+										            return "" + s.toFixed(0);
+										        }
+
+										    );
+
+										};
+
+		</script>
+
+
+
+	</body>
+</html>

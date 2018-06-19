@@ -1,0 +1,3444 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no /">
+		<meta name="Keywords" Content="北方备件商城,北方,备件,beifangbenjian,bfbj /">
+		<title>北方备件商城</title>
+		<!-- icon -->
+		<link href="goods-list.html" rel="shortcut icon" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/index.css" />
+		
+	</head>
+	
+	<body>
+	<!-- 头部   -->
+	<header>
+		<!-- 顶部导航部分 -->
+		<div class="container shortcut">
+			<div class="w1210">
+				<!-- 左侧导航 -->
+				<div class="left-nav col-lg-5">
+					<ul>
+						<li id="app-jd" data-widget="dropdown">
+							<a href="index.html" target="_blank">导航首页</a>
+						</li>
+						<li>
+							<a href="stock-picking.html" target="_blank">钢铁商城</a>
+						</li>
+						<li><a href="stock-picking.html" target="_blank">汽车商城</a></li>
+						<li><a href="stock-picking.html" target="_blank">快消品商城</a></li>
+						<li><a href="stock-picking.html" target="_blank">北方备件商城</a></li>
+					</ul>
+				</div>
+				<!-- 右侧 -->
+				<div class="right-info">
+					<ul>
+						<li id="loginbar">
+
+							<!--<a href="{:U('Home/Orders/queryByPage')}">
+                                <span style="color:#C31529">{$WST_USER["userName"]?$WST_USER["userName"]:$WST_USER["loginName"]}</span>
+                            </a>-->
+							欢迎光临<!--{$CONF['mallName']}！-->北方备件商城！
+							<!--<if condition="!$WST_USER['userId']">-->
+							<a href="#">请登录</a>
+							<a href="#" style="color: #C31529;padding-left: 16px;">
+								免费注册
+							</a>
+							<!--</if>-->
+							<!--<if condition="$WST_USER["userId"] gt 0">
+                                <a href="javascript:logout();">[退出]</a>
+                            <!--</if>-->
+						</li>
+						<li><a>│</a></li>
+						<li><a href="#">我的信息 </a> ∨</li>
+						<li><a>│</a></li>
+						<li><a href="#">关注我们</a> ∨</li>
+						<li><a>│</a></li>
+						<li><a href="#">帮助中心</a> ∨</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- LOGO 搜索栏和购物车部分 -->
+		<div class="container">
+			<div class="w1210">
+				<!-- logo -->
+				<div class="logo-img fl col-lg-3">
+					<!-- logo网址是备件商城主页 -->
+					<a href="#" class="logo"></a>
+				</div>
+				<!-- 搜索栏 -->
+				<div class="fl search">
+					<div class="form">
+						<input type="text" data="wst_key_search" onkeyup="getSearchInfo(this,event);" placeholder="金立备件"/>
+						<button value="keyWords" onkeyup="getSearchInfo(this,event);" data="wst_key_search" id="keyword" type="button" onclick="" class="cw">搜索</button>
+						<button type="button" class="kc">领用库存</button>
+					</div>
+				</div>
+				<!-- 购物车 -->
+				<div id="" class="fl shop-cat">
+					<div class="fl ac shopcat-box">
+						<i class="car-icon"></i>
+						<i class="sum-icon">
+
+								<span class="wst-nvg-cart-cnt cart_num">
+									2
+								</span>
+
+						</i>
+						<a href="#" class="">我的购物车</a>
+						<i class="left-icon"></i>
+						<!-- 购物车内容 -->
+						<div class="wst-cart-box" style="display: none;">
+							<div class="wst-nvg-cart-goods">
+								<h5>购物车中暂无商品</h5>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- nav -->
+		<nav class="w1210">
+			<div class="nav-all">
+				<a href="goods-list.html" id="allpro" class="allpro">
+					全部产品分类
+				</a>
+			</div>
+			<div class="nav-items">
+				<ul>
+					<li>
+						<a href="goods-list.html">
+							大型备件商城
+						</a>
+					</li>
+					<li>
+						<a href="goods-list.html">
+							品牌专区
+						</a>
+					</li>
+					<li>
+						<a href="goods-list.html">
+							积分商城
+						</a>
+					</li>
+					<li>
+						<a href="goods-list.html">
+							合作伙伴专区
+						</a>
+					</li>
+					<li>
+						<a href="goods-list.html">
+							技术中心
+						</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
+	</header>
+
+	<!-- body -->
+	<div class="w1210">
+			<!-- 左侧nav -->
+			<div class="all-contents" id="all-contents">
+				<ul>
+					<li>
+						<h3>
+							<a href="goods-list.html">
+								机械标准类
+							</a>
+						<i> > </i>
+						</h3>
+						<div class="layer-box" style="display: none">
+							<!-- 一小类 -->
+							<dl class="layer-box-item layer-box-item1">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜1
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+							<dl class="layer-box-item">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+						</div>
+					</li>
+					<li>
+						<h3>
+							<a href="goods-list.html">
+							机械非标准类
+						</a>
+						<i> > </i>
+						</h3>
+						<div class="layer-box" style="display: none">
+							<!-- 一小类 -->
+							<dl class="layer-box-item layer-box-item1">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜2
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+							<dl class="layer-box-item">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+						</div>
+					</li>
+					<li>
+						<h3>
+							<a href="#">
+							电气类
+						</a>
+						<i> > </i>
+						</h3>
+						<div class="layer-box" style="display: none">
+							<!-- 一小类 -->
+							<dl class="layer-box-item layer-box-item1">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜3
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+							<dl class="layer-box-item">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+						</div>
+					</li>
+					<li>
+						<h3>
+							<a href="#">
+							仪表自动化类
+						</a>
+						<i> > </i>
+						</h3>
+						<div class="layer-box" style="display: none">
+							<!-- 一小类 -->
+							<dl class="layer-box-item layer-box-item1">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜4
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+							<dl class="layer-box-item">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+						</div>
+					</li>
+					<li>
+						<h3>
+							<a href="#">
+							液压类
+						</a>
+						<i> > </i>
+						</h3>
+						<div class="layer-box" style="display: none">
+							<!-- 一小类 -->
+							<dl class="layer-box-item layer-box-item1">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜5
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+							<dl class="layer-box-item">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+						</div>
+					</li>
+					<li>
+						<h3>
+							<a href="#">
+							工具类
+						</a>
+						<i> > </i>
+						</h3>
+						<div class="layer-box" style="display: none">
+							<!-- 一小类 -->
+							<dl class="layer-box-item layer-box-item1">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜6
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+							<dl class="layer-box-item">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+						</div>
+					</li>
+					<li>
+						<h3>
+							<a href="#">
+							五金杂品类
+						</a>
+						<i> > </i>
+						</h3>
+						<div class="layer-box" style="display: none">
+							<!-- 一小类 -->
+							<dl class="layer-box-item layer-box-item1">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜7
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+							<dl class="layer-box-item">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+						</div>
+					</li>
+					<li>
+						<h3>
+							<a href="#">
+							钢材类
+						</a>
+						<i> > </i>
+						</h3>
+						<div class="layer-box" style="display: none">
+							<!-- 一小类 -->
+							<dl class="layer-box-item layer-box-item1">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜8
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+							<dl class="layer-box-item">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+						</div>
+					</li>
+					<li>
+						<h3>
+							<a href="#">
+							劳保类
+						</a>
+						<i> > </i>
+						</h3>
+						<div class="layer-box"style="display: none" >
+							<!-- 一小类 -->
+							<dl class="layer-box-item layer-box-item1">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜9
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+							<dl class="layer-box-item">
+								<!-- 标题 -->
+								<dt class="layer-box-tit">
+									<a href="goods-list.html">
+										你猜猜
+										<i class="layer-box-tit-icon">
+											>
+										</i>
+									</a>
+
+								</dt>
+								<!-- 商品名 -->
+								<dd class="layer-box-con">
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+									<a class="box-shop-name" href="goods-list.html">
+										螺母
+									</a>
+
+								</dd>
+							</dl>
+
+						</div>
+					</li>
+				</ul>
+			</div>
+
+	<!-- banner -->
+			<div class="banner-carousel">
+				<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+				<!-- 圆点 -->
+				<ol class="carousel-indicators">
+				  	<li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				</ol>
+				
+				<!-- 图片 -->
+				<div class="carousel-inner" role="listbox">
+				    <div class="item active">
+				        <img src="img/1.png" alt="">
+				        <!--<div class="carousel-caption">
+				        ...
+				        </div>-->
+				    </div>
+				    <div class="item">
+				        <img src="img/2.png" alt="">
+				        <!--<div class="carousel-caption">
+				        ...
+				        </div>-->
+				    </div>
+				    <div class="item">
+				        <img src="img/3.png" alt="">
+				        <!--<div class="carousel-caption">
+				        	...
+				        </div>-->
+				    </div>
+				    
+				</div>
+				
+				  <!-- 箭头 -->
+				  <!--<a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right"></span>
+				    <span class="sr-only">Next</span>
+				  </a>-->
+				</div>
+			</div>
+			<!-- 品牌检索 -->
+			<div class="brand-street">
+				<nav>
+					<dl>
+						<dt class="cr">产品推荐</dt>
+						<!--<dd>-->
+							<!--<a href="#">-->
+								<!--A~D-->
+							<!--</a>-->
+						<!--</dd>-->
+						<!--<dd>-->
+							<!--<a href="#">-->
+								<!--E~J-->
+							<!--</a>-->
+						<!--</dd>-->
+						<!--<dd>-->
+							<!--<a href="#">-->
+								<!--K~M-->
+							<!--</a>-->
+						<!--</dd>-->
+						<!--<dd>-->
+							<!--<a href="#">-->
+								<!--N~S-->
+							<!--</a>-->
+						<!--</dd>-->
+						<!--<dd>-->
+							<!--<a href="#">-->
+								<!--T~Z-->
+							<!--</a>-->
+						<!--</dd>-->
+					</dl>
+				</nav>
+				<div class="brand-logo">
+					<div class="street1">
+						<ul>
+							<li>
+								<a href="goods-detail.html">
+									<img src="img/1.png" width="180" height="60"/>
+								</a>
+							</li>
+							<li>
+								<img src="img/1.png" width="180" height="60"/>
+							</li>
+							<li>
+								<img src="img/1.png" width="180" height="60"/>
+							</li>
+							<li>
+								<img src="img/1.png" width="180" height="60"/>
+							</li>
+							<li>
+								<img src="img/1.png" width="180" height="60"/>
+							</li>
+							<li>
+								<img src="img/1.png" width="180" height="60"/>
+							</li>
+							<li>
+								<img src="img/1.png" width="180" height="60"/>
+							</li>
+							<li>
+								<img src="img/1.png" width="180" height="60"/>
+							</li>
+							<li>
+								<img src="img/1.png" width="180" height="60"/>
+							</li>
+							<li>
+								<img src="img/1.png" width="180" height="60"/>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!-- 广告轮播 -->
+		<div class="w1210 ad">
+			<ul>
+				<li>
+					<a href="goods-detail.html">
+						<img src="img/4.png" />
+					</a>
+				</li>
+			</ul>
+		</div>
+		
+		<!-- 楼层 -->
+		<div class="w1210">
+			<div class="shop-floor">
+				<!-- 标题  -->
+				<div class="floor-tit">
+					<h2>
+						1F
+					</h2>
+					<h2 style="padding-left: 20px;">
+						 机械标准类
+					</h2>
+					<div class="rightkey">
+						<ul>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="floor-content">
+					<!-- 左侧边栏 -->
+					<div class="side">
+						<div>
+							<a href="#">
+								<img src="img/1f-side.png" alt="" />
+							</a>
+						</div>
+						<div class="words">
+							<ul>
+								<li>
+									<a href="#">
+										轴承
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										螺母
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钻头
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钳子
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										套筒旋具
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										小五金
+									</a>
+								</li>
+								
+								
+							</ul>
+							<ul>
+								<li>
+									<a href="#">
+										脚轮
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										烟雾探测器
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										洗手膏
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										喷胶
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main-body">
+						<ul>
+							<li>
+								<a href="goods-detail.html" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="goods-detail.html" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="goods-detail.html" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="w1210">
+		<div class="shop-floor">
+			<!-- 标题  -->
+			<div class="floor-tit">
+				<h2>
+					2F
+				</h2>
+				<h2 style="padding-left: 20px;">
+					机械非标准类
+				</h2>
+				<div class="rightkey">
+					<ul>
+						<li>
+							<a href="#">
+								金立
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								金立
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								金立
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								金立
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								金立
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="floor-content">
+				<!-- 左侧边栏 -->
+				<div class="side">
+					<div>
+						<a href="goods-detail.html">
+							<img src="img/1f-side.png" alt="" />
+						</a>
+					</div>
+					<div class="words">
+						<ul>
+							<li>
+								<a href="goods-detail.html">
+									轴承
+								</a>
+							</li>
+							<li>
+								<a href="goods-detail.html">
+									螺母
+								</a>
+							</li>
+							<li>
+								<a href="goods-detail.html">
+									钻头
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									钳子
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									套筒旋具
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									小五金
+								</a>
+							</li>
+
+
+						</ul>
+						<ul>
+							<li>
+								<a href="#">
+									脚轮
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									烟雾探测器
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									洗手膏
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									喷胶
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="main-body">
+					<ul>
+						<li>
+							<a href="goods-detail.html" class="" id="">
+								<h2>
+									关键环节，首选品质！
+								</h2>
+								<h3>
+									关键环节，首选品质！
+								</h3>
+								<img src="img/1.png" alt="" />
+							</a>
+						</li>
+						<li>
+							<a href="goods-detail.html" class="" id="">
+								<h2>
+									关键环节，首选品质！
+								</h2>
+								<h3>
+									关键环节，首选品质！
+								</h3>
+								<img src="img/1.png" alt="" />
+							</a>
+						</li>
+						<li>
+							<a href="goods-detail.html" class="" id="">
+								<h2>
+									关键环节，首选品质！
+								</h2>
+								<h3>
+									关键环节，首选品质！
+								</h3>
+								<img src="img/1.png" alt="" />
+							</a>
+						</li>
+						<li>
+							<a href="goods-detail.html" class="" id="">
+								<h2>
+									关键环节，首选品质！
+								</h2>
+								<h3>
+									关键环节，首选品质！
+								</h3>
+								<img src="img/1.png" alt="" />
+							</a>
+						</li>
+						<li>
+							<a href="goods-detail.html" class="" id="">
+								<h2>
+									关键环节，首选品质！
+								</h2>
+								<h3>
+									关键环节，首选品质！
+								</h3>
+								<img src="img/1.png" alt="" />
+							</a>
+						</li>
+						<li>
+							<a href="goods-detail.html" class="" id="">
+								<h2>
+									关键环节，首选品质！
+								</h2>
+								<h3>
+									关键环节，首选品质！
+								</h3>
+								<img src="img/1.png" alt="" />
+							</a>
+						</li>
+						<li>
+							<a href="goods-detail.html" class="" id="">
+								<h2>
+									关键环节，首选品质！
+								</h2>
+								<h3>
+									关键环节，首选品质！
+								</h3>
+								<img src="img/1.png" alt="" />
+							</a>
+						</li>
+						<li>
+							<a href="goods-detail.html" class="" id="">
+								<h2>
+									关键环节，首选品质！
+								</h2>
+								<h3>
+									关键环节，首选品质！
+								</h3>
+								<img src="img/1.png" alt="" />
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+		<div class="w1210">
+			<div class="shop-floor">
+				<!-- 标题  -->
+				<div class="floor-tit">
+					<h2>
+						3F
+					</h2>
+					<h2 style="padding-left: 20px;">
+						电气类
+					</h2>
+					<div class="rightkey">
+						<ul>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="floor-content">
+					<!-- 左侧边栏 -->
+					<div class="side">
+						<div>
+							<a href="goods-detail.html">
+								<img src="img/1f-side.png" alt="" />
+							</a>
+						</div>
+						<div class="words">
+							<ul>
+								<li>
+									<a href="#">
+										轴承
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										螺母
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钻头
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钳子
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										套筒旋具
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										小五金
+									</a>
+								</li>
+
+
+							</ul>
+							<ul>
+								<li>
+									<a href="#">
+										脚轮
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										烟雾探测器
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										洗手膏
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										喷胶
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main-body">
+						<ul>
+							<li>
+								<a href="goods-detail.html" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="goods-detail.html" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="goods-detail.html" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="goods-detail.html" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="goods-detail.html" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="goods-detail.html" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="goods-detail.html" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="goods-detail.html" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w1210">
+			<div class="shop-floor">
+				<!-- 标题  -->
+				<div class="floor-tit">
+					<h2>
+						4F
+					</h2>
+					<h2 style="padding-left: 20px;">
+						仪表自动化类
+					</h2>
+					<div class="rightkey">
+						<ul>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="floor-content">
+					<!-- 左侧边栏 -->
+					<div class="side">
+						<div>
+							<a href="#">
+								<img src="img/1f-side.png" alt="" />
+							</a>
+						</div>
+						<div class="words">
+							<ul>
+								<li>
+									<a href="#">
+										轴承
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										螺母
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钻头
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钳子
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										套筒旋具
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										小五金
+									</a>
+								</li>
+
+
+							</ul>
+							<ul>
+								<li>
+									<a href="#">
+										脚轮
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										烟雾探测器
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										洗手膏
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										喷胶
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main-body">
+						<ul>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w1210">
+			<div class="shop-floor">
+				<!-- 标题  -->
+				<div class="floor-tit">
+					<h2>
+						5F
+					</h2>
+					<h2 style="padding-left: 20px;">
+						液压类
+					</h2>
+					<div class="rightkey">
+						<ul>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="floor-content">
+					<!-- 左侧边栏 -->
+					<div class="side">
+						<div>
+							<a href="#">
+								<img src="img/1f-side.png" alt="" />
+							</a>
+						</div>
+						<div class="words">
+							<ul>
+								<li>
+									<a href="#">
+										轴承
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										螺母
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钻头
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钳子
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										套筒旋具
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										小五金
+									</a>
+								</li>
+
+
+							</ul>
+							<ul>
+								<li>
+									<a href="#">
+										脚轮
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										烟雾探测器
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										洗手膏
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										喷胶
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main-body">
+						<ul>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w1210">
+			<div class="shop-floor">
+				<!-- 标题  -->
+				<div class="floor-tit">
+					<h2>
+						6F
+					</h2>
+					<h2 style="padding-left: 20px;">
+						工具类
+					</h2>
+					<div class="rightkey">
+						<ul>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="floor-content">
+					<!-- 左侧边栏 -->
+					<div class="side">
+						<div>
+							<a href="#">
+								<img src="img/1f-side.png" alt="" />
+							</a>
+						</div>
+						<div class="words">
+							<ul>
+								<li>
+									<a href="#">
+										轴承
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										螺母
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钻头
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钳子
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										套筒旋具
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										小五金
+									</a>
+								</li>
+
+
+							</ul>
+							<ul>
+								<li>
+									<a href="#">
+										脚轮
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										烟雾探测器
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										洗手膏
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										喷胶
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main-body">
+						<ul>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w1210">
+			<div class="shop-floor">
+				<!-- 标题  -->
+				<div class="floor-tit">
+					<h2>
+						7F
+					</h2>
+					<h2 style="padding-left: 20px;">
+						五金杂品类
+					</h2>
+					<div class="rightkey">
+						<ul>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="floor-content">
+					<!-- 左侧边栏 -->
+					<div class="side">
+						<div>
+							<a href="#">
+								<img src="img/1f-side.png" alt="" />
+							</a>
+						</div>
+						<div class="words">
+							<ul>
+								<li>
+									<a href="#">
+										轴承
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										螺母
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钻头
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钳子
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										套筒旋具
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										小五金
+									</a>
+								</li>
+
+
+							</ul>
+							<ul>
+								<li>
+									<a href="#">
+										脚轮
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										烟雾探测器
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										洗手膏
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										喷胶
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main-body">
+						<ul>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w1210">
+			<div class="shop-floor">
+				<!-- 标题  -->
+				<div class="floor-tit">
+					<h2>
+						8F
+					</h2>
+					<h2 style="padding-left: 20px;">
+						钢材类
+					</h2>
+					<div class="rightkey">
+						<ul>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="floor-content">
+					<!-- 左侧边栏 -->
+					<div class="side">
+						<div>
+							<a href="#">
+								<img src="img/1f-side.png" alt="" />
+							</a>
+						</div>
+						<div class="words">
+							<ul>
+								<li>
+									<a href="#">
+										轴承
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										螺母
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钻头
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钳子
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										套筒旋具
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										小五金
+									</a>
+								</li>
+
+
+							</ul>
+							<ul>
+								<li>
+									<a href="#">
+										脚轮
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										烟雾探测器
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										洗手膏
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										喷胶
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main-body">
+						<ul>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="w1210">
+			<div class="shop-floor">
+				<!-- 标题  -->
+				<div class="floor-tit">
+					<h2>
+						9F
+					</h2>
+					<h2 style="padding-left: 20px;">
+						劳保类
+					</h2>
+					<div class="rightkey">
+						<ul>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									金立
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="floor-content">
+					<!-- 左侧边栏 -->
+					<div class="side">
+						<div>
+							<a href="#">
+								<img src="img/1f-side.png" alt="" />
+							</a>
+						</div>
+						<div class="words">
+							<ul>
+								<li>
+									<a href="#">
+										轴承
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										螺母
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钻头
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										钳子
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										套筒旋具
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										小五金
+									</a>
+								</li>
+
+
+							</ul>
+							<ul>
+								<li>
+									<a href="#">
+										脚轮
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										烟雾探测器
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										洗手膏
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										喷胶
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="main-body">
+						<ul>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+							<li>
+								<a href="#" class="" id="">
+									<h2>
+										关键环节，首选品质！
+									</h2>
+									<h3>
+										关键环节，首选品质！
+									</h3>
+									<img src="img/1.png" alt="" />
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<footer class="w1210 wst-footer-hp-box">
+		<div class="wst-footer1">
+			<div class="wst-footer-hp-ck1">
+				<volist name="helps" key="k1" id="vo1">
+					<!--<div class="wst-footer-wz-ca">
+                        <div class="wst-footer-wz-pt">
+                            <img src="__ROOT__/Apps/Home/View/default/images/a{$k1}.jpg" height="18" width="18"/>
+                            <span class="wst-footer-wz-pn">{$vo1["catName"]}</span>
+                            <div style='margin-left:30px;'>
+                                <volist name="vo1['articlecats']" key="k2" id="vo2">
+                                <a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">{$vo2['articleTitle']}</a><br/>
+                                </volist>
+                            </div>
+                        </div>
+                    </div>-->
+					<div class="wst-footer-wz-ca">
+						<div class="wst-footer-wz-pt">
+							<img src="img/footiocni-0.png" height="18" width="18"/>
+							<span class="wst-footer-wz-pn">新手上路</span>
+							<div style='margin-left:30px;'>
+								<volist name="vo1['articlecats']" key="k2" id="vo2">
+									<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">自主开户</a><br/>
+								</volist>
+							</div>
+						</div>
+					</div>
+					<div class="wst-footer-wz-ca">
+						<div class="wst-footer-wz-pt">
+							<img src="img/footiocni-1.png" height="18" width="18"/>
+							<span class="wst-footer-wz-pn">如何付款</span>
+							<div style='margin-left:30px;'>
+								<volist name="vo1['articlecats']" key="k2" id="vo2">
+									<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">支付方式</a><br/>
+								</volist>
+							</div>
+						</div>
+					</div>
+					<div class="wst-footer-wz-ca">
+						<div class="wst-footer-wz-pt">
+							<img src="img/footiocni-2.png" height="18" width="18"/>
+							<span class="wst-footer-wz-pn">配送说明</span>
+							<div style='margin-left:30px;'>
+								<volist name="vo1['articlecats']" key="k2" id="vo2">
+									<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">运费说明</a><br/>
+								</volist>
+							</div>
+						</div>
+					</div>
+					<div class="wst-footer-wz-ca">
+						<div class="wst-footer-wz-pt">
+							<img src="img/footiocni-3.png" height="18" width="18"/>
+							<span class="wst-footer-wz-pn">售后服务</span>
+							<div style='margin-left:30px;'>
+								<volist name="vo1['articlecats']" key="k2" id="vo2">
+									<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">售后服务</a><br/>
+								</volist>
+							</div>
+						</div>
+					</div>
+					<div class="wst-footer-wz-ca">
+						<div class="wst-footer-wz-pt">
+							<img src="img/footiocni-4.png" height="18" width="18"/>
+							<span class="wst-footer-wz-pn">常见问题</span>
+							<div style='margin-left:30px;'>
+								<volist name="vo1['articlecats']" key="k2" id="vo2">
+									<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">账号&密码问题</a><br/>
+								</volist>
+							</div>
+						</div>
+					</div>
+				</volist>
+
+				<div class="wst-footer-wz-clt">
+					<div style="padding-top:5px;line-height:25px;">
+						<img src="img/footiocni-5.png" height="18" width="18"/>
+						<span class="wst-footer-wz-kf">联系客服</span>
+						<div style='margin-left:30px;'>
+							<a href="#">联系电话</a><br/>
+							<if condition="$CONF['phoneNo'] neq ''">
+								<!--<span class="wst-footer-pno">{$CONF['phoneNo']}</span><br/></br/>-->
+							</if>
+						</div>
+					</div>
+				</div>
+				<div class="wst-clear"></div>
+			</div>
+
+			<div class="">
+				<img src="img/reapal.png" height="40" width="120"/>&nbsp融宝签约商家&nbsp;|&nbsp;
+				<span class="wst-footer-frd">正品保障</span><span >100%正品</span>&nbsp;|&nbsp;
+				<span class="wst-footer-frd">质量保障</span>购物无忧&nbsp;|&nbsp;
+			</div>
+			<div class="wst-footer-hp-ck3">
+				<div class="links">
+					<volist name=":WSTNavigation(1)" id="vo" >
+						<a rel="nofollow" <if condition="$vo['isOpen'] eq 1">
+						<!--target="_blank"</if> href="{$vo['navUrl']}">{$vo['navTitle']}
+                    </a>
+                    &nbsp;
+                    <if condition="$vo['end'] eq 0">|&nbsp;</if>-->
+					</volist>
+				</div>
+
+				<div class="copyright">
+
+					<!--<php>
+                        if($CONF['mallFooter']!=''){
+                             echo htmlspecialchars_decode($CONF['mallFooter']);
+                        }
+                    </php>
+
+                     <if condition="$CONF['mallLicense'] ==''">-->
+					<div>
+						Copyright©2015 Powered By <a target="_blank" href="http://www.wstmall.com">WSTMall</a>
+					</div>
+					<else/>
+					<div id="wst-mallLicense" data='1' style="display:none;">Copyright©2015 Powered By <a target="_blank" href="http://www.wstmall.com">WSTMall</a></div>
+					</if>
+				</div>
+			</div>
+		</div>
+	</footer>
+	
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+	</body>
+</html>

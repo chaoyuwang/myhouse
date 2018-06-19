@@ -1,0 +1,230 @@
+.container {
+  @extend %clearfix;
+}
+// 顶部logo、搜索
+.topbox {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+.logo {
+  img {
+    width: 325px;
+    height: 45px;
+  }
+}
+.search{
+  width: 590px;
+  height: 36px;
+  border: 2px solid $base-red-color;
+  display: flex;
+  input {
+    background: none;
+    border: none;
+    color: $ftColor3;
+    flex: 1;
+    box-sizing: border-box;
+    padding: 0 2px;
+  }
+  button {
+    cursor: pointer;
+    border: none;
+    background-color: $base-red-color;
+    height: 36px;
+    width: 80px;
+    color: $white;
+    font-size: $font-size-md;
+  }
+}
+.btn-red {
+  background-color: $base-red-color;
+  color: $white;
+  font-size: $font-size-default;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 10px;
+}
+.buycar{
+  color: $defaultColor;
+  background-color: $white;
+  border:1px solid #e0e0e0;
+  font-size: $font-size-sm;
+  height: 36px;
+  line-height: 36px;
+  padding: 0 15px;
+}
+// 顶部导航-左侧
+.big-nav {
+  @extend %clearfix;
+  width: 212px;
+  float: left;
+  font-size: $font-size-default;
+  dt {
+    height: 42px;
+    line-height: 42px;
+    text-align: center;
+    background-color: #ab1022;
+    color: $white;
+    text-align: center;
+    font-size: $font-size-md;
+  }
+  dd {
+    height: 61px;
+    line-height: 61px;
+    background: $base-red-color;
+    color: $white;
+    text-indent: 25px;
+    &:hover {
+      cursor: pointer;
+      color: $base-red-color;
+      background-color: $white;
+    }
+  }
+}
+// 顶部右侧banner等
+.nav-ban-rec {
+  width: 988px;
+  float: right;
+}
+.navbar{
+  width: 100%;
+  height: 40px;
+  background-color: $base-red-color;
+  ul li {
+    float: left;
+    margin-right: 10px;
+    a {
+      display: inline-block;
+      padding: 0 15px;
+      color: $white;
+      line-height: 40px;
+      &:hover {
+        background-color: #ab1022;
+      }
+    }
+  }
+}
+// banner
+.banner {
+  width: 100%;
+  height: 362px;
+  margin: 10px 0;
+  img {
+    width: 100%;
+  }
+}
+// 推荐
+.recommend {
+  @extend %clearfix;
+  dt {
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px solid #e0e0e0;
+    margin-bottom: 10px;
+  }
+  dd {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+  }
+}
+.bigrecom{
+  @extend %clearfix;
+  margin: 10px 0;
+}
+.floor {
+  @extend %clearfix;
+  margin-bottom: 10px;
+}
+.floor-title {
+  border-bottom: 2px solid $base-red-color;
+  padding-bottom: 4px;
+  display: flex;
+  justify-content: space-between;
+  h1 {
+    color: $base-red-color;
+    font-size: $font-size-md;
+    font-weight: bold;
+  }
+}
+.second-level {
+  text-align: right;
+  a {
+    color: $ftColor9;
+    font-size: $font-size-sm;
+    margin-left: 7px;
+    &:hover {
+      color: $base-red-color;
+    }
+  }
+}
+.floor-info {
+  display: flex;
+  justify-content: space-around;
+}
+.floor-banner {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 17%;
+  img {
+    height: 324px;
+  }
+}
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  a {
+    flex-basis: 50%;
+    text-align: center;
+    color: $ftColor9;
+    font-size: $font-size-sm;
+    line-height: 200%;
+    &:hover {
+      color: $base-red-color;
+    }
+  }
+}
+.floor-shops {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.items {
+  height: 274px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  flex: 0 0 25%;
+  padding: 5px;
+  border: {
+    bottom: 1px solid #eee;
+    right: 1px solid #eee;
+  }
+  h2 {
+    color: $ftColor9;
+    font-size: $font-size-md;
+    padding: {
+      top: 7px;
+      left: 5px;
+    }
+    span {
+      display: block;
+      color: $base-red-color;
+      font-size: $font-size-default;
+    }
+  }
+  img {
+    width: 160px;
+    height: 160px;
+    align-self: flex-end;
+  }
+  &:hover {
+    img {
+      transition: all 1s;
+      transform: scale(1.05)
+    }
+  }
+}
+

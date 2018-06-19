@@ -1,0 +1,46 @@
+// 顶部
+.header{
+  width: $root-size;
+  height: $h30;
+  background-color: #f0f0f0;
+  border-bottom: 1px solid #e0e0e0;
+}
+.wrapper{
+  width: $wrap-width;
+  height: 100%;
+  margin: 0 auto;
+}
+.head-nav{
+  width: 50%;
+  float: left;
+  line-height: $h30;
+  a {
+    font-size: $font-size-sm;
+    color: $ftColor9;
+    margin-right: 10px;
+    &:hover{
+      color: $base-red-color
+    }
+  }
+}
+.head-info{
+  width: 50%;
+  float: right;
+  color: $defaultColor;
+  font-size: $font-size-sm;
+  line-height: $h30;
+  text-align: right;
+  a {
+    color: $ftColor9;
+    margin-left: 10px;
+    &:hover{
+      color: $base-red-color;
+    }
+  }
+}
+a.login{
+  color: $ftColor9;
+}
+a.regsiter{
+  color: $base-red-color;
+}

@@ -1,0 +1,47 @@
+$bgcolor: #efefef;
+$color: #333;
+$fontSize: 14px;
+
+@mixin center($width:null, $height:null) {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @if not $width and not $height{
+    transform: translate(-50%,-50%);
+  }@else if $width and $height{
+    width: $width;
+    height: $height;
+    margin-left: -$width/2;
+    margin-top: -$height/2
+  }@else if not $width{
+    height: $height;
+    margin-top: -$height/2;
+    transform: translateX(-50%);
+  }@else{
+    width: $width;
+    margin-left: -$width/2;
+    transform: translateY(-50%);
+  }
+}
+
+html,body,div,h1{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-color: $bgcolor;
+  font-size: $fontSize;
+  box-sizing: border-box;
+}
+.layer{
+  display: flex;
+  padding: 10px;
+  background: #fff;
+  border:1px solid #666;
+  @include center(200px);
+  background-image: url('../../../images/topic.jpg');
+  img{
+    width: 100px;
+    height: 100px
+  }
+}

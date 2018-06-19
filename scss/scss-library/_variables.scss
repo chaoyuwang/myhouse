@@ -1,0 +1,36 @@
+// 是否支持ie
+$legacy-support-for-ie: true !default;
+// 默认字体
+// 字体Unicode编码 微软雅黑:\5FAE\8F6F\96C5\9ED1 , 宋体:\5B8B\4F53
+$font-family-sans-serif: '\5FAE\8F6F\96C5\9ED1', '\5B8B\4F53', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+// 
+// 默认颜色
+// 
+$defaultColor: #333 !default;
+$white: #fff !default;
+$black: #000 !default;
+
+// 
+// 字体
+// 根元素以100%计，即16px，以下类推，.875=14px，1.125=18px
+$root-size: 100%;
+$font-size-base: 1.6rem !default;
+$font-size-default: ($root-size * .875) !default; //14px
+$font-size-lg: ($root-size * 1.25) !default; // 20px
+$font-size-md: ($root-size * 1.125) !default; //18px
+$font-size-sm: ($root-size * .75) !default;  // 12px
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-base:  $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+
+// 
+// table
+// 
+$table-bg: transparent !default;
+$table-accent-bg: rgba($black, .05) !default;
+$table-hover-bg: rgba($black, .075) !default;
+$table-active-bg: $table-hover-bg !default;

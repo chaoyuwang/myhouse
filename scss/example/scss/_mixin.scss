@@ -1,0 +1,47 @@
+// 水平垂直居中
+// 调用方法：@include center(width, height)
+@mixin center($width:null, $height:null){
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @if $width and $height {
+    width: $width;
+    height: $height;
+    margin-left: -($width/2);
+    margin-top: -($height/2);
+  } @else if $width {
+    width: $width;
+    margin-left: -($width/2);
+    transform: translateY(-50%);
+  } @else if $height {
+    height: $height;
+    margin-top: -($height/2);
+    transform: translateX(-50%);
+  } @else {
+    transform: translate(-50%, -50%)
+  }
+}
+// 清楚浮动 方法1
+// 调用方法 @extend %clearfix
+%clearfix {
+  *zoom: 1;
+  &::after,
+  &::before {
+    content: '';
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+  }
+  &::after {
+    clear: both
+  }
+}
+// 清楚浮动 方法2（bootstrap4）
+// 调用方法 @include clearfix()
+@mixin clearfix() {
+  &::after {
+    display: block;
+    clear: both;
+    content: '';
+  }
+}

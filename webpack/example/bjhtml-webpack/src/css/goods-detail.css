@@ -1,0 +1,48 @@
+
+.detail-item{
+    clear: both;
+    overflow: hidden;
+    zoom: 1;
+    padding:10px 10px 6px 10px;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    font-family: "Microsoft YaHei", tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
+}
+.detail-item .user{
+    margin-top: 0;
+    color: #999;
+}
+.user .u-name{
+    margin-right: 20px;
+}
+.user .date-ask{
+    margin-left: 20px;
+}
+.detail-item dl{
+    margin-top: 5px;
+    overflow: hidden;
+    zoom: 1;
+}
+.detail-item dl dt{
+    float: left;
+    width: 8%;
+    text-align: justify;
+}
+.detail-item dl dd{
+    float: right;
+    width: 91%;
+    overflow: hidden;
+}
+.answer{
+    color: #c31529;
+}
+.answer .answer-hf{
+    width: 85%;
+    float: left;
+}
+.answer .answer-ti{
+    float: right;
+    width: 14%;
+    text-align: right;
+    color: #999;
+}

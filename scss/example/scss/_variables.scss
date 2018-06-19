@@ -1,0 +1,31 @@
+// 字体Unicode编码 微软雅黑:\5FAE\8F6F\96C5\9ED1 , 宋体:\5B8B\4F53
+$font-family-sans-serif: '\5FAE\8F6F\96C5\9ED1', '\5B8B\4F53', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base: $font-family-sans-serif !default;
+// 默认背景
+$bgcolor: rgba(255, 255, 255, 1);
+// 颜色
+$defaultColor: #666 !default;
+$ftColor3: #333 !default;
+$ftColor9: #999 !default;
+$white: #fff !default;
+$base-red-color: #C31529;
+// 尺寸
+$wrap-width: 1210px !default;
+$left-width: 212px;
+$banner-width: 988px;
+// 字体大小
+// 根元素以100%计，即16px，以下类推，.875=14px，1.125=18px
+$root-size: 100%;
+$font-size-base: 1.6rem !default;
+$font-size-default: ($root-size * .875) !default; //14px
+$font-size-lg: ($root-size * 1.25) !default; // 20px
+$font-size-md: ($root-size * 1.125) !default; //18px
+$font-size-sm: ($root-size * .75) !default;  // 12px
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-bold: 700 !default;
+$font-weight-base:  $font-weight-normal !default;
+$line-height-base: 1.5 !default;
+// 尺寸
+$h30: 30px;

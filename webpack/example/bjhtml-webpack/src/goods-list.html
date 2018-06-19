@@ -1,0 +1,3143 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no /">
+		<meta name="Keywords" Content="北方备件商城,北方,备件,beifangbenjian,bfbj /">
+		<title>北方备件商城</title>
+		<!-- icon -->
+		<link href="" rel="shortcut icon" />
+		<link href="css/bootstrap.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	
+	<body>
+		<!-- 头部   -->
+		<header>
+			<!-- 顶部导航部分 -->
+			<div class="container shortcut">
+				<div class="w1210">
+					<!-- 左侧导航 -->
+					<div class="left-nav col-lg-5">
+						<ul>
+							<li id="app-jd" data-widget="dropdown">
+								<a href="http://www.humaiw.com" target="_blank">导航首页</a>
+							</li>
+							<li>
+								<a href="http://www.humaiw.com/index.php" target="_blank">钢铁商城</a>
+							</li>
+							<li><a href="http://car.humaiw.com" target="_blank">汽车商城</a></li>
+							<li><a href="http://market.humaiw.com" target="_blank">快消品商城</a></li>
+							<li><a href="#" target="_blank">北方备件商城</a></li>
+						</ul>
+					</div>
+					<!-- 右侧 -->
+					<div class="right-info">
+						<ul>
+							<li id="loginbar">
+
+								<!--<a href="{:U('Home/Orders/queryByPage')}">
+                                    <span style="color:#C31529">{$WST_USER["userName"]?$WST_USER["userName"]:$WST_USER["loginName"]}</span>
+                                </a>-->
+								欢迎光临<!--{$CONF['mallName']}！-->北方备件商城！
+								<!--<if condition="!$WST_USER['userId']">-->
+								<a href="{:U('Home/Users/login')}">请登录</a>
+								<a href="{:U('Home/Users/regist')}" style="color: #C31529;padding-left: 16px;">
+									免费注册
+								</a>
+								<!--</if>-->
+								<!--<if condition="$WST_USER["userId"] gt 0">
+                                    <a href="javascript:logout();">[退出]</a>
+                                <!--</if>-->
+							</li>
+							<li><a>│</a></li>
+							<li><a href="#">我的信息 </a> ∨</li>
+							<li><a>│</a></li>
+							<li><a href="#">关注我们</a> ∨</li>
+							<li><a>│</a></li>
+							<li><a href="#">帮助中心</a> ∨</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- LOGO 搜索栏和购物车部分 -->
+			<div class="container">
+				<div class="w1210">
+					<!-- logo -->
+					<div class="logo-img fl col-lg-3">
+						<!-- logo网址是备件商城主页 -->
+						<a href="#" class="logo"></a>
+					</div>
+					<!-- 搜索栏 -->
+					<div class="fl search">
+						<div class="form">
+							<input type="text" data="wst_key_search" onkeyup="getSearchInfo(this,event);" placeholder="金立备件"/>
+							<button value="{$keyWords} onkeyup="getSearchInfo(this,event);" data="wst_key_search" id="keyword" type="button" onclick="" class="cw">搜索</button>
+							<button type="button" class="kc">领用库存</button>
+						</div>
+					</div>
+					<!-- 购物车 -->
+					<div id="" class="fl shop-cat">
+						<div class="fl ac shopcat-box">
+							<i class="car-icon"></i>
+							<i class="sum-icon">
+
+								<span class="wst-nvg-cart-cnt cart_num">
+									2
+								</span>
+
+							</i>
+							<a href="#" class="">我的购物车</a>
+							<i class="left-icon"></i>
+							<!-- 购物车内容 -->
+							<div class="wst-cart-box" style="display: none;">
+								<div class="wst-nvg-cart-goods">
+									<h5>购物车中暂无商品</h5>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+			<!-- nav -->
+			<nav class="w1210">
+				<div class="nav-all">
+					<a href="#" id="allpro" class="allpro">
+						全部产品分类
+					</a>
+					<div class="all-contents all-contents1" id="all-contents" style="display: none;">
+						<ul>
+							<li>
+								<h3>
+									<a href="#">
+										机械标准类
+									</a>
+									<i> > </i>
+								</h3>
+								<div class="layer-box" style="display: none">
+									<!-- 一小类 -->
+									<dl class="layer-box-item layer-box-item1">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜1
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+									<dl class="layer-box-item">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+								</div>
+							</li>
+							<li>
+								<h3>
+									<a href="#">
+										机械非标准类
+									</a>
+									<i> > </i>
+								</h3>
+								<div class="layer-box" style="display: none">
+									<!-- 一小类 -->
+									<dl class="layer-box-item layer-box-item1">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜2
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+									<dl class="layer-box-item">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+								</div>
+							</li>
+							<li>
+								<h3>
+									<a href="#">
+										电气类
+									</a>
+									<i> > </i>
+								</h3>
+								<div class="layer-box" style="display: none">
+									<!-- 一小类 -->
+									<dl class="layer-box-item layer-box-item1">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜3
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+									<dl class="layer-box-item">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+								</div>
+							</li>
+							<li>
+								<h3>
+									<a href="#">
+										仪表自动化类
+									</a>
+									<i> > </i>
+								</h3>
+								<div class="layer-box" style="display: none">
+									<!-- 一小类 -->
+									<dl class="layer-box-item layer-box-item1">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜4
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+									<dl class="layer-box-item">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+								</div>
+							</li>
+							<li>
+								<h3>
+									<a href="#">
+										液压类
+									</a>
+									<i> > </i>
+								</h3>
+								<div class="layer-box" style="display: none">
+									<!-- 一小类 -->
+									<dl class="layer-box-item layer-box-item1">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜5
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+									<dl class="layer-box-item">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+								</div>
+							</li>
+							<li>
+								<h3>
+									<a href="#">
+										工具类
+									</a>
+									<i> > </i>
+								</h3>
+								<div class="layer-box" style="display: none">
+									<!-- 一小类 -->
+									<dl class="layer-box-item layer-box-item1">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜6
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+									<dl class="layer-box-item">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+								</div>
+							</li>
+							<li>
+								<h3>
+									<a href="#">
+										五金杂品类
+									</a>
+									<i> > </i>
+								</h3>
+								<div class="layer-box" style="display: none">
+									<!-- 一小类 -->
+									<dl class="layer-box-item layer-box-item1">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜7
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+									<dl class="layer-box-item">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+								</div>
+							</li>
+							<li>
+								<h3>
+									<a href="#">
+										钢材类
+									</a>
+									<i> > </i>
+								</h3>
+								<div class="layer-box" style="display: none">
+									<!-- 一小类 -->
+									<dl class="layer-box-item layer-box-item1">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜8
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+									<dl class="layer-box-item">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+								</div>
+							</li>
+							<li>
+								<h3>
+									<a href="#">
+										劳保类
+									</a>
+									<i> > </i>
+								</h3>
+								<div class="layer-box"style="display: none" >
+									<!-- 一小类 -->
+									<dl class="layer-box-item layer-box-item1">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜9
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+									<dl class="layer-box-item">
+										<!-- 标题 -->
+										<dt class="layer-box-tit">
+											<a href="">
+												你猜猜
+												<i class="layer-box-tit-icon">
+													>
+												</i>
+											</a>
+
+										</dt>
+										<!-- 商品名 -->
+										<dd class="layer-box-con">
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+											<a class="box-shop-name" href="">
+												螺母
+											</a>
+
+										</dd>
+									</dl>
+
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="nav-items">
+					<ul>
+						<li>
+							<a href="">
+								大型备件商城
+							</a>
+						</li>
+						<li>
+							<a href="">
+								品牌专区
+							</a>
+						</li>
+						<li>
+							<a href="">
+								积分商城
+							</a>
+						</li>
+						<li>
+							<a href="">
+								合作伙伴专区
+							</a>
+						</li>
+						<li>
+							<a href="">
+								技术中心
+							</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+		<!-- 商品列表主体 -->
+		<div class="w1210">
+			<!-- 商品层级目录导航 -->
+			<div class="crumb">
+				<ul>
+					<li>
+						<a htef="#">
+							首页
+						</a>
+						<i> > </i>
+					</li>
+					<li>
+						<a htef="#">
+							机械零部件
+						</a>
+						<i> > </i>
+					</li>
+					
+					<li>
+						<a htef="#">
+							机械零部件
+						</a>
+						<!--<i> > </i>-->
+					</li>
+					<!-- 用户添加的筛选条件
+						
+						新增li标签并添加类名 crumbs-nav-item
+					<!--&ndash;&gt;-->
+					<!--<li class="crumbs-nav-item">-->
+						<!--&lt;!&ndash; 显示点击的类型 &ndash;&gt;-->
+						<!--<a href="#">-->
+							<!--&lt;!&ndash; 添加的分类名 &ndash;&gt;-->
+							<!--<b>品牌：</b>-->
+							<!--&lt;!&ndash; 添加的名字 &ndash;&gt;-->
+							<!--<i>金立</i>-->
+							<!--&lt;!&ndash; 删除按键 点击可以单独删除该条件 &ndash;&gt;-->
+							<!--<em onclick=""></em>-->
+						<!--</a>-->
+					<!--</li>-->
+					<!---->
+					<!--<li class="crumbs-nav-item">-->
+						<!--&lt;!&ndash; 显示点击的类型 &ndash;&gt;-->
+						<!--<a href="#">-->
+							<!--<b>型号：</b>-->
+							<!--<i>i7-5100</i>-->
+							<!--<em onclick=""></em>-->
+						<!--</a>-->
+					<!--</li>-->
+				</ul>
+
+					<!-- 点击删除有类名crumbs-nav-item 的标签元素 -->
+					<!--<span class="over">-->
+						<!--<a>-->
+							<!--清空筛选-->
+						<!--</a>-->
+					<!--</span>-->
+
+			</div>
+			<!-- 筛选条件列表 -->
+			<div class="selector-line">
+				 <!-- 筛选条件1 -->
+				<div class="sl-wrap">
+					<div class="sl-key">
+						商品品牌：
+					</div>
+					<div class="sl-value">
+						<ul>
+							<li>
+								<a class="pitch">
+									全部
+								</a>
+							</li>
+							<li>
+								<a>
+									HJDGH
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									金立
+								</a>
+							</li>
+							<li>
+								<a>
+									红二晶儿
+								</a>
+							</li>
+							<li>
+								<a>
+									活动结束计划的建设
+								</a>
+							</li>
+							<li>
+								<a>
+									HA
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶琪琪
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+				<!--筛选条件2-->
+				<div class="sl-wrap">
+					<div class="sl-key">
+						价格区间：
+					</div>
+					<div class="sl-value">
+						<ul>
+							<li>
+								<a class="pitch">
+									全部
+								</a>
+							</li>
+							<li>
+								<a>
+									100~500
+								</a>
+							</li>
+							<li>
+								<a>
+									500~1000
+								</a>
+							</li>
+							<li>
+								<a>
+									1000~1500
+								</a>
+							</li>
+							<li>
+								<a>
+									1500~2000
+								</a>
+							</li>
+							<li>
+								<a>
+									2000以上
+								</a>
+							</li>
+							
+							
+						</ul>
+					</div>
+				</div>
+				<!-- 筛选条件3 -->
+				<div class="sl-wrap">
+					<div class="sl-key">
+						型号：
+					</div>
+					<div class="sl-value">
+						<ul>
+							<li>
+								<a class="pitch">
+									全部
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							<li>
+								<a>
+									红三晶
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 选择条件 -->
+			<div class="filter">
+				
+				<div class="f-line" id="f-line-r">
+					<a href="#">
+						<i>综合排序</i>
+						<b></b>
+					</a>
+				</div>
+				
+				<div class="f-line">
+					<a href="#">
+						<i>人气</i>
+						<b></b>
+					</a>
+				</div>
+				
+				<div class="f-line">
+					<a href="#">
+						<i>销量</i>
+						<b></b>
+					</a>
+				</div>
+				
+				<div class="f-line">
+					<a href="#">
+						<i>价格</i>
+						<b></b>
+					</a>
+				</div>
+				
+				<div class="f-line">
+					<a href="#">
+						<i>好评</i>
+						<b></b>
+					</a>
+				</div>
+				
+				<div class="f-line">
+					<a href="#">
+						<i>最新上架</i>
+						<!--<b></b>-->
+					</a>
+				</div>
+			</div>
+			
+			<!-- 用户自定价格区间输入 -->
+			<div class="f-price">
+					<!-- 最低价 -->
+					<input type="text" class="min-money" placeholder="最低价" />
+					
+					<i>-</i>
+					<!-- 最高价 -->
+					<input type="text" class="max-money" placeholder="最高价" />
+					<!-- 确认提交按键 -->
+					<button type="button" class="f-btn" onclick="">
+						确定
+					</button>
+				</div>
+		</div>
+		<!-- 商品列表板块 -->
+		<div class="lb">
+			<div class="w1210">
+				
+				<div class="goods-list">
+					<ul>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+						<li>
+							<!-- 单个商品开始  -->
+							<div class="goods-content">
+								<!-- 图片 -->
+								<div class="c-img">
+									<a href="#">
+										<img src="img/1.png" alt="" >
+									</a>
+								</div>
+								<!-- 价钱 -->
+								<div class="c-pirce">
+									<em>
+										￥
+									</em>
+									<i>
+										5399.00
+									</i>
+								</div>
+								<!-- 名字 -->
+								<div class="c-name">
+									<i>
+										<a href="#">水泵（金立）双核i7-5100 1151接口</a>
+									</i>
+									<em>
+										物料编码:aaaaaaaa1
+									</em>
+								</div>
+								<!-- 规格型号 -->
+								<div class="c-gg">
+									<i>
+										规格型号：
+									</i>
+									<em class="c-xh">
+										<ul>
+											<li>
+												i5-2210
+											</li>
+										</ul>
+									</em>
+								</div>
+								<!-- 最后人数和加入购物车 -->
+								<div class="c-operate">
+									<!-- 人数 -->
+									<div class="people-num">
+										<i>
+											已有
+										</i>
+										<a href="#" class="cr fwb">
+											125
+										</a>
+										<i>
+											人购买
+										</i>
+									</div>
+									<!-- 加入购物车 -->
+									<div class="car-btn">
+										<a href="#">
+											加入购物车
+										</a>
+									</div>
+								</div>
+							</div>
+							<!-- 单个商品结束 -->
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 商品列表页码 -->
+			<div class="w1210">
+				
+				<div class="wrap">
+					<a href="#" class="bj">
+						<i> < </i>
+						<em>
+							上一页
+						</em>
+					</a>
+					<a href="#">
+						首页
+					</a>
+					<a href="#" class="num">
+						1
+					</a>
+					<a href="#" class="num">
+						2
+					</a>
+					<a href="#" class="num">
+						3
+					</a>
+					<a href="#" class="num">
+						4
+					</a>
+					<!--  -->
+					<a href="#" class="num">
+						···
+					</a>
+					
+					<a href="#" class="bj">
+						尾页
+					</a>
+					
+					<a href="#" >
+						<em>
+							下一页
+						</em>
+						<i> > </i>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+		
+		<!-- 底部 -->
+		<footer class="w1210 wst-footer-hp-box">
+			<div class="wst-footer1">
+				<div class="wst-footer-hp-ck1">
+					<volist name="helps" key="k1" id="vo1">
+						<!--<div class="wst-footer-wz-ca">
+                            <div class="wst-footer-wz-pt">
+                                <img src="__ROOT__/Apps/Home/View/default/images/a{$k1}.jpg" height="18" width="18"/>
+                                <span class="wst-footer-wz-pn">{$vo1["catName"]}</span>
+                                <div style='margin-left:30px;'>
+                                    <volist name="vo1['articlecats']" key="k2" id="vo2">
+                                    <a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">{$vo2['articleTitle']}</a><br/>
+                                    </volist>
+                                </div>
+                            </div>
+                        </div>-->
+						<div class="wst-footer-wz-ca">
+							<div class="wst-footer-wz-pt">
+								<img src="img/footiocni-0.png" height="18" width="18"/>
+								<span class="wst-footer-wz-pn">新手上路</span>
+								<div style='margin-left:30px;'>
+									<volist name="vo1['articlecats']" key="k2" id="vo2">
+										<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">自主开户</a><br/>
+									</volist>
+								</div>
+							</div>
+						</div>
+						<div class="wst-footer-wz-ca">
+							<div class="wst-footer-wz-pt">
+								<img src="img/footiocni-1.png" height="18" width="18"/>
+								<span class="wst-footer-wz-pn">如何付款</span>
+								<div style='margin-left:30px;'>
+									<volist name="vo1['articlecats']" key="k2" id="vo2">
+										<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">支付方式</a><br/>
+									</volist>
+								</div>
+							</div>
+						</div>
+						<div class="wst-footer-wz-ca">
+							<div class="wst-footer-wz-pt">
+								<img src="img/footiocni-2.png" height="18" width="18"/>
+								<span class="wst-footer-wz-pn">配送说明</span>
+								<div style='margin-left:30px;'>
+									<volist name="vo1['articlecats']" key="k2" id="vo2">
+										<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">运费说明</a><br/>
+									</volist>
+								</div>
+							</div>
+						</div>
+						<div class="wst-footer-wz-ca">
+							<div class="wst-footer-wz-pt">
+								<img src="img/footiocni-3.png" height="18" width="18"/>
+								<span class="wst-footer-wz-pn">售后服务</span>
+								<div style='margin-left:30px;'>
+									<volist name="vo1['articlecats']" key="k2" id="vo2">
+										<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">售后服务</a><br/>
+									</volist>
+								</div>
+							</div>
+						</div>
+						<div class="wst-footer-wz-ca">
+							<div class="wst-footer-wz-pt">
+								<img src="img/footiocni-4.png" height="18" width="18"/>
+								<span class="wst-footer-wz-pn">常见问题</span>
+								<div style='margin-left:30px;'>
+									<volist name="vo1['articlecats']" key="k2" id="vo2">
+										<a href="{:U('Home/Articles/index/',array('articleId'=>$vo2['articleId']))}">账号&密码问题</a><br/>
+									</volist>
+								</div>
+							</div>
+						</div>
+					</volist>
+
+					<div class="wst-footer-wz-clt">
+						<div style="padding-top:5px;line-height:25px;">
+							<img src="img/footiocni-5.png" height="18" width="18"/>
+							<span class="wst-footer-wz-kf">联系客服</span>
+							<div style='margin-left:30px;'>
+								<a href="#">联系电话</a><br/>
+								<if condition="$CONF['phoneNo'] neq ''">
+									<!--<span class="wst-footer-pno">{$CONF['phoneNo']}</span><br/></br/>-->
+								</if>
+							</div>
+						</div>
+					</div>
+					<div class="wst-clear"></div>
+				</div>
+
+				<div class="">
+					<img src="img/reapal.png" height="40" width="120"/>&nbsp融宝签约商家&nbsp;|&nbsp;
+					<span class="wst-footer-frd">正品保障</span><span >100%正品</span>&nbsp;|&nbsp;
+					<span class="wst-footer-frd">质量保障</span>购物无忧&nbsp;|&nbsp;
+				</div>
+				<div class="wst-footer-hp-ck3">
+					<div class="links">
+						<volist name=":WSTNavigation(1)" id="vo" >
+							<a rel="nofollow" <if condition="$vo['isOpen'] eq 1">
+							<!--target="_blank"</if> href="{$vo['navUrl']}">{$vo['navTitle']}
+                        </a>
+                        &nbsp;
+                        <if condition="$vo['end'] eq 0">|&nbsp;</if>-->
+						</volist>
+					</div>
+
+					<div class="copyright">
+
+						<!--<php>
+                            if($CONF['mallFooter']!=''){
+                                 echo htmlspecialchars_decode($CONF['mallFooter']);
+                            }
+                        </php>
+
+                         <if condition="$CONF['mallLicense'] ==''">-->
+						<div>
+							Copyright©2015 Powered By <a target="_blank" href="http://www.wstmall.com">WSTMall</a>
+						</div>
+						<else/>
+						<div id="wst-mallLicense" data='1' style="display:none;">Copyright©2015 Powered By <a target="_blank" href="http://www.wstmall.com">WSTMall</a></div>
+						</if>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/index.js"></script>
+	<script>
+		$(".f-line").click(function () {
+			$(this).attr("id","f-line-r").siblings().removeAttr("id");
+        })
+	</script>
+</html>
